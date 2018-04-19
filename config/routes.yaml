@@ -1,0 +1,15 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+rellena:
+    path: /rellena
+    controller: App\Controller\ExamController::rellena
+
+exercise1:
+    path: /order/dropshipping
+    controller: App\Controller\ExamController::returnPaidOrders
+
+reset:
+    path: /order/dropshipping/{order}/article/{article}
+    controller: App\Controller\ExamController::reset
