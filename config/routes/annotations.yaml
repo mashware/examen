@@ -1,0 +1,3 @@
+controllers:
+    resource: ../../src/examen/Infrastructure/Domain/Model/Controller/
+    type: annotation
