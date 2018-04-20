@@ -1,0 +1,24 @@
+ListAllOrder:
+    path: /order/dropshipping
+    controller: App\Infrastructure\Controller\DropShippingOrderController::listAll
+
+ListAllPaidOrder:
+    path: /order/dropshippingpaids
+    controller: App\Infrastructure\Controller\DropShippingOrderController::listAllPaidStatus
+
+listOneByOrderNumber:
+    path: /order/dropshipping/{orderNumber}
+    controller: App\Infrastructure\Controller\DropShippingOrderController::listOneByOrderNumber
+
+listByOrderNumberAndArticle:
+    path: /order/dropshipping/order/{orderNumber}/article/{article}
+    controller: App\Infrastructure\Controller\DropShippingOrderController::listByOrderNumberAndArticle
+
+resetByOrderNumberAndArticle:
+    path: /order/dropshipping/order/{orderNumber}/article/{article}/reset
+    controller: App\Infrastructure\Controller\DropShippingOrderController::resetByOrderNumberAndArticle
+
+NewProviderByNewProviderOrderNumberAndArticle:
+    path: /order/dropshipping/order/{orderNumber}/article/{article}/provider/{provider}
+    controller: App\Infrastructure\Controller\DropShippingOrderController::changeProvider
+
