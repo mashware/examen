@@ -12,6 +12,6 @@ namespace App\Domain\Entity\DropShipping\Repository;
 interface OrderDropShippingRepository
 {
     const PAID = 'PAGADO';
-    public function allPaid(): array;
+    public function allPaid();
 }
 

@@ -25,9 +25,9 @@ class OrderDropShipping
     private $id;
 
     /**
-     * @ORM\Column(type="integer", nullable=true)
+     * @ORM\Column(type="integer", nullable=false)
      */
-    private $order;
+    private $orderId;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
@@ -94,9 +94,9 @@ class OrderDropShipping
      */
     private $warehouse;
 
-    public function __construct($order)
+    public function __construct($orderId)
     {
-        $this->order = $order;
+        $this->orderId = $orderId;
         $this->orderProvider = 0;
         $this->emailOrderSent = false;
         $this->tag = '0';
@@ -113,12 +113,22 @@ class OrderDropShipping
     }
 
     /**
-     * @return integer $order
+     * @return mixed
      */
-    public function order(): integer
+    public function getOrderId()
     {
-        return $this->order;
+        return $this->orderId;
     }
+
+    /**
+     * @param mixed $orderId
+     */
+    public function setOrderId($orderId): void
+    {
+        $this->orderId = $orderId;
+    }
+
+
 
     /**
      * @return mixed
@@ -163,7 +173,7 @@ class OrderDropShipping
     /**
      * @param mixed
      */
-    public function setState($stateOrder): void
+    public function setStateOrder($stateOrder): void
     {
         $this->stateOrder = $stateOrder;
     }

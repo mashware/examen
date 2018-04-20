@@ -1,20 +1,21 @@
 <?php
 
-namespace App\Controller;
+namespace App\Infrastructure\Controller;
 
-use App\Services\ArticleServices;
+use App\Application\GetAllOrdersPaid\DataTransformJSON;
+use App\Application\GetAllOrdersPaid\GetAllOrdersPaid;
+use App\Application\GetAllOrdersPaid\GetAllOrdersPaidCommand;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\Request;
 
-class BlogController extends Controller
+
+class DropShippingController extends Controller
 {
     public function allOrdersPaid()
     {
-        $articles = 'Hola';
-        dump($articles);
+        $order = new GetAllOrdersPaid($this->getDoctrine()->getRepository('App:DropShipping\OrderDropShipping'), new DataTransformJSON());
+        $arr = $order->handler(new GetAllOrdersPaidCommand());
+        dump($arr);
         die;
-        return $this->render('blog/viewAllArticles.html.twig',
-                    ['articles' => $articles]);
     }
 
 }

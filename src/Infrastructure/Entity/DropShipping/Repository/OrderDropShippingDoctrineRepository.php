@@ -8,20 +8,26 @@
 
 namespace App\Infrastructure\Entity\DropShipping\Repository;
 
+use App\Domain\Entity\DropShipping\OrderDropShipping;
 use App\Domain\Entity\DropShipping\Repository\OrderDropShippingRepository;
 use Doctrine\ORM\EntityRepository;
 
-class OrderDropShippingDoctrineRepository extends EntityRepository implements \App\Domain\Entity\DropShipping\Repository\OrderDropShippingRepository
+class OrderDropShippingDoctrineRepository extends EntityRepository implements OrderDropShippingRepository
 {
-    public function allPaid(): array
+    public function allPaid()
     {
         return $this->getEntityManager()
             ->createQueryBuilder()
-            ->select('order')
-            ->from('App:DropShipping\OrderDropShipping', 'order')
-            ->where('order.stateOrder = :paid')
+            ->select('orderDropShipping')
+            ->from('App:DropShipping\OrderDropShipping', 'orderDropShipping')
+            ->where('orderDropShipping.stateOrder = :paid')
             ->setParameter('paid', OrderDropShippingRepository::PAID)
             ->getQuery()
             ->execute();
+    }
+
+    private function getOneOrderDropShipping(int $orderDropShippingId)
+    {
+        return $this->findOneBy(['id' => $orderDropShippingId]);
     }
 }
