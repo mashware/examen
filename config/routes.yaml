@@ -1,0 +1,7 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+#routeActionsOrders:
+#    resource: 'routes/orders/order_routes.yaml'
+#    prefix:   /order
