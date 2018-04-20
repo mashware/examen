@@ -5,6 +5,7 @@ namespace Infrastructure\Repository;
 use App\Domain\Entity\OrderEntity;
 use Doctrine\ORM\EntityRepository;
 use App\Domain\Entity\OrderEntityRepositoryInterface;
+use Symfony\Bridge\Doctrine\RegistryInterface;
 
 
 /**
@@ -59,7 +60,7 @@ class OrderEntityRepository extends EntityRepository implements OrderEntityRepos
         $qb = $this->createQueryBuilder('p')
             ->select('p.pedido', 'p.estado', 'p.fecha_sincronizado')
             ->andWhere('p.estado = :paid')
-            ->setParameter('paid', self::NOPAGADO)
+            ->setParameter('paid', self::PAGADO)
             ->getQuery();
         return $qb->execute();
     }

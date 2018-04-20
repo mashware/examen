@@ -7,9 +7,8 @@ namespace Composer\Autoload;
 class ComposerStaticInitbfb8e82ada8102ff340b82589b611115
 {
     public static $files = array (
-        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
-        '92c8763cd6170fce6fcfe7e26b4e8c10' => __DIR__ . '/..' . '/symfony/phpunit-bridge/bootstrap.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
+        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         'a4ecaeafb8cfb009ad0e052c90355e98' => __DIR__ . '/..' . '/beberlei/assert/lib/Assert/functions.php',
     );
 
@@ -54,7 +53,6 @@ class ComposerStaticInitbfb8e82ada8102ff340b82589b611115
             'Symfony\\Bundle\\MakerBundle\\' => 27,
             'Symfony\\Bundle\\FrameworkBundle\\' => 31,
             'Symfony\\Bridge\\Twig\\' => 20,
-            'Symfony\\Bridge\\PhpUnit\\' => 23,
             'Symfony\\Bridge\\Doctrine\\' => 24,
             'Sensio\\Bundle\\FrameworkExtraBundle\\' => 35,
         ),
@@ -98,8 +96,8 @@ class ComposerStaticInitbfb8e82ada8102ff340b82589b611115
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
         ),
         'Zend\\EventManager\\' => 
         array (
@@ -201,10 +199,6 @@ class ComposerStaticInitbfb8e82ada8102ff340b82589b611115
         array (
             0 => __DIR__ . '/..' . '/symfony/twig-bridge',
         ),
-        'Symfony\\Bridge\\PhpUnit\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/phpunit-bridge',
-        ),
         'Symfony\\Bridge\\Doctrine\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/doctrine-bridge',
@@ -240,7 +234,6 @@ class ComposerStaticInitbfb8e82ada8102ff340b82589b611115
         'Infrastructure\\' => 
         array (
             0 => __DIR__ . '/../..' . '/infrastructure',
-            1 => __DIR__ . '/../..' . '/infrastructure',
         ),
         'Doctrine\\ORM\\' => 
         array (
@@ -293,7 +286,6 @@ class ComposerStaticInitbfb8e82ada8102ff340b82589b611115
         'Application\\' => 
         array (
             0 => __DIR__ . '/../..' . '/Application',
-            1 => __DIR__ . '/../..' . '/Application',
         ),
         'App\\Tests\\' => 
         array (
@@ -302,7 +294,6 @@ class ComposerStaticInitbfb8e82ada8102ff340b82589b611115
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
-            1 => __DIR__ . '/../..' . '/src',
         ),
     );
 

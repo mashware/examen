@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Ejercicio 6{% endblock %}</title>
+    {% block stylesheets %}
+    <style type="text/css">
+        li {
+            list-style: none;
+        }
+    </style>
+    {% endblock %}
+</head>
+<body>
+{% block body %}
+    {% if page >1 %}
+        <a href="{{ path('paginateex1', {'page': page-1}) }}">Página anterior</a>
+    {% endif %}
+
+    {% if result is not empty %}
+        <a href="{{ path('paginateex1', {'page': page+1}) }}">Página siguiente</a>
+    {% endif %}
+
+    <h2>Página {{ page }}</h2>
+    <div>
+        <ul>
+        {% for orders in result %}
+            <li><h4>{{ orders.1.pedido }}:.</h4></li>
+            <li>Pedido: {{ orders.1.pedido }} Estado: {{ orders.1.estado }} Fecha sincronizado {{ orders.1.fecha_sincronizado }}</li>
+            <hr>
+        {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
+</body>
+</html>

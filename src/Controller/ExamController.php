@@ -4,7 +4,9 @@ namespace App\Controller;
 
 use App\Controller\Util\FillTableOrderEntity;
 use App\Domain\Entity\OrderEntity;
+use App\Domain\Service\DataTransformerReturnPaidOrders;
 use App\Domain\Service\EmptyValidator;
+use Infrastructure\Repository\OrderEntityRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 use Application\DropShipping\DropShipping;
@@ -19,20 +21,32 @@ class ExamController extends Controller
                     OrderEntity::class
                 )
         );
-        $paidOrders = $dropShipping->execute(new EmptyValidator());
 
-        return $this->json(var_dump($paidOrders));
+        $paidOrders = $dropShipping->execute(new EmptyValidator(), new DataTransformerReturnPaidOrders());
+
+        return $this->json(($paidOrders));
     }
 
     public function reset($order, $article)
     {
-        // Prueba de que llegan los valores introducidos en la ruta
+        // Incomplete
         return $this->json([
             'message' => $order,
             'path' => $article,
         ]);
     }
 
+    public function paginateEx1($page)
+    {
+        $result = json_decode($this->returnPaidOrders()->getContent());
+        //$result = json_decode($result);
+        $result = array_slice($result, 5*($page-1), 5);
+
+        return $this->render('PaginateEx1/paginateEx1.html.twig', [
+            'result' => $result,
+            'page' => $page
+        ]);
+    }
 
 
     public function rellena()

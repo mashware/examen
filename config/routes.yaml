@@ -10,6 +10,14 @@ exercise1:
     path: /order/dropshipping
     controller: App\Controller\ExamController::returnPaidOrders
 
+paginateex1:
+   path: /order/dropshipping/paginateEx1/{page}
+   controller: App\Controller\ExamController::paginateEx1
+   defaults: { page: 1 }
+   requirements:
+           page: '\d+'
+
 reset:
     path: /order/dropshipping/{order}/article/{article}
     controller: App\Controller\ExamController::reset
+
