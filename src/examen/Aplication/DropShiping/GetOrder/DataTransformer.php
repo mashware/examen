@@ -7,7 +7,8 @@
  */
 namespace  App\examen\Aplication\DropShiping\GetOrder;
 
-class DataTransformer
-{
 
+interface DataTransformer
+{
+    public function transform(Array $array);
 }

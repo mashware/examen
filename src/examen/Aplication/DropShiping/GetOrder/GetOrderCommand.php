@@ -8,7 +8,7 @@
 
 namespace  App\examen\Aplication\DropShiping\GetOrder;
 
-class Command
+class GetOrderCommand
 {
 
 }

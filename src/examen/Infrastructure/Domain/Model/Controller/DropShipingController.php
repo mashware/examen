@@ -2,18 +2,23 @@
 
 namespace App\examen\Infrastructure\Domain\Model\Controller;
 
-use Symfony\Component\Routing\Annotation\Route;
+
+use App\examen\Aplication\DropShiping\GetOrder\DataTransformerJSON;
+use App\examen\Aplication\DropShiping\GetOrder\GetOrder;
+use App\examen\Aplication\DropShiping\GetOrder\GetOrderCommand;
+
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+
 
 class DropShipingController extends Controller
 {
-    /**
-     * @Route("/drop", name="drop")
-     */
-    public function index()
+    public function getAllOrders()
     {
-        return $this->render('drop/index.html.twig', [
-            'controller_name' => 'DropShipingController',
-        ]);
+        $handler = new GetOrder(
+            $this->getDoctrine()->getRepository('App:DropShiping\DropShiping'),
+            new DataTransformerJSON());
+
+        return new JsonResponse($handler->handler(new GetOrderCommand()));
     }
 }

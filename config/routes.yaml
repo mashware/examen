@@ -1,6 +1,6 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
-index:
+getAllOrders:
     path: /drop
-    controller: App\Controller\DropController::index
+    controller: App\examen\Infrastructure\Domain\Model\Controller\DropShipingController::getAllOrders

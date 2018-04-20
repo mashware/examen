@@ -1,11 +1,11 @@
 <?php
 
-namespace App\examen\Domain\Model\DropShiping\Domain;
+namespace App\examen\Domain\Model\DropShiping;
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\PedidoRepository")
+ * @ORM\Entity(repositoryClass="App\examen\Infrastructure\Domain\Model\Repository\OrderRepository")
  */
 class DropShiping
 {

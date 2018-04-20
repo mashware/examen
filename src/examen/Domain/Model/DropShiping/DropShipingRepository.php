@@ -6,10 +6,10 @@
  * Time: 13:18
  */
 
-namespace App\examen\Domain\Model\DropShiping\Domain;
+namespace App\examen\Domain\Model\DropShiping;
 
 
 interface DropShipingRepository
 {
-public function
+    public function getAllOrders();
 }
