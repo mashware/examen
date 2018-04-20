@@ -3,10 +3,11 @@
 namespace Javier\Exam\Infrastructure\Repository\Order;
 
 use Doctrine\ORM\EntityRepository;
-use Javier\Exam\Domain\Model\Order\DropShippingOrderInterface;
+use Javier\Exam\Domain\Model\Order\DropShippingOrderRepositoryInterface;
 use Javier\Exam\Domain\Model\Order\StatusDropShippingOrder;
+use Javier\Exam\Domain\Model\Entity\Order\DropShippingOrder;
 
-class DropShippingOrderRepository extends EntityRepository implements DropShippingOrderInterface
+class DropShippingOrderRepository extends EntityRepository implements DropShippingOrderRepositoryInterface
 {
     public function showOrdersWithStatusPaidOut(): array
     {
@@ -28,16 +29,59 @@ class DropShippingOrderRepository extends EntityRepository implements DropShippi
         return $query->execute();
     }
 
-    /*public function resetOrdersByIdAndArticle(int $id, int $article): bool
+    /**
+     * @param int $id
+     * @param int $article
+     * @return array
+     * @throws \Doctrine\ORM\ORMException
+     * @throws \Doctrine\ORM\OptimisticLockException
+     */
+    public function resetOrdersByIdAndArticle(int $id, int $article): array
     {
-        $order = $this->find(['pedido' => $id, 'id_articulo' => $article]);
+        $orders = $this->queryByIdAndArticle($id, $article);
 
-        $this->find
-
-        if (null === $order) {
-            throw new \Exception('Pedido no encontrado');
+        /* @var $order DropShippingOrder */
+        foreach ($orders as $order) {
+            $order->setEstado(StatusDropShippingOrder::STATUS_NEW);
+            $order->setPedidoProveedor(0);
+            $order->setAlmacen(0);
+            $order->setIdProveedor(0);
         }
 
-        $order->set
-    }*/
+        $this->getEntityManager()->flush();
+
+        return $orders;
+    }
+
+    /**
+     * @param int $id
+     * @param int $article
+     * @return array
+     * @throws \Doctrine\ORM\ORMException
+     * @throws \Doctrine\ORM\OptimisticLockException
+     */
+    public function changeProviderOrdersByIdAndArticle(int $id, int $article, int $repository): array
+    {
+        $orders = $this->queryByIdAndArticle($id, $article);
+
+        /* @var $order DropShippingOrder */
+        foreach ($orders as $order) {
+            $order->setIdProveedor($repository);
+        }
+
+        $this->getEntityManager()->flush();
+
+        return $orders;
+    }
+
+    private function queryByIdAndArticle(int $id, int $article): array
+    {
+        $query = $this->createQueryBuilder('dso')
+            ->andWhere('dso.pedido = :order AND dso.idArticulo = :article')
+            ->setParameter('order', $id)
+            ->setParameter('article',$article)
+            ->getQuery();
+
+        return $query->execute();
+    }
 }

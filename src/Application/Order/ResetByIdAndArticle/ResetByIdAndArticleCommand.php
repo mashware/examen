@@ -1,10 +1,10 @@
 <?php
 
-namespace Javier\Exam\Application\Order\ResetOrdersGivenByIdAndArticle;
+namespace Javier\Exam\Application\Order\ResetByIdAndArticle;
 
 use Assert\Assertion;
 
-class ResetOrdersGivenByIdAndArticleCommand
+class ResetByIdAndArticleCommand
 {
     private $id;
     private $article;
@@ -12,20 +12,20 @@ class ResetOrdersGivenByIdAndArticleCommand
     public function __construct($id, $article)
     {
         Assertion::notBlank($id, 'Tienes que especificar un id de pedido');
-        Assertion::integer($id, 'El id del pedido no es un número');
+        Assertion::numeric($id, 'El id del pedido no es un número');
         Assertion::notBlank($article, 'Tienes que especificar un id de artículo');
-        Assertion::integer($article, 'El id del artículo no es un número');
+        Assertion::numeric($article, 'El id del artículo no es un número');
 
         $this->id = $id;
         $this->article = $article;
     }
 
-    public function getId(): int
+    public function id(): int
     {
         return $this->id;
     }
 
-    public function getArticle(): int
+    public function article(): int
     {
         return $this->article;
     }

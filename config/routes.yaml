@@ -5,3 +5,11 @@ order_status_paid_out:
 order_get_by_id:
     path: /order/dropshipping/{id}
     controller: Javier\Exam\Infrastructure\Controller\Order\DropShippingOrder::showOrderById
+
+reset_orders_get_by_id_article:
+    path: /order/dropshipping/{id}/article/{article}/reset
+    controller: Javier\Exam\Infrastructure\Controller\Order\DropShippingOrder::resetOrdersByIdAndArticle
+
+change_provider_orders_get_by_id_article:
+    path: /order/dropshipping/{id}/article/{article}/provider/{provider}
+    controller: Javier\Exam\Infrastructure\Controller\Order\DropShippingOrder::changeProviderOrdersByIdAndArticle
