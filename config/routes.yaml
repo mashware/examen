@@ -6,3 +6,8 @@ allOrdersPaid:
     path: /order/dropshipping
     controller: App\Infrastructure\Controller\DropShippingController::allOrdersPaid
     methods: [GET]
+
+updateAnOrderWithArticle:
+    path: /order/dropshipping/{orderId}/article/{articleId}/reset
+    controller: App\Infrastructure\Controller\DropShippingController::resetAnOrderWithArticle
+    methods: [GET]

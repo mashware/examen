@@ -10,24 +10,43 @@ namespace App\Infrastructure\Entity\DropShipping\Repository;
 
 use App\Domain\Entity\DropShipping\OrderDropShipping;
 use App\Domain\Entity\DropShipping\Repository\OrderDropShippingRepository;
+use Doctrine\ORM\EntityNotFoundException;
 use Doctrine\ORM\EntityRepository;
 
 class OrderDropShippingDoctrineRepository extends EntityRepository implements OrderDropShippingRepository
 {
     public function allPaid()
     {
-        return $this->getEntityManager()
-            ->createQueryBuilder()
-            ->select('orderDropShipping')
-            ->from('App:DropShipping\OrderDropShipping', 'orderDropShipping')
-            ->where('orderDropShipping.stateOrder = :paid')
-            ->setParameter('paid', OrderDropShippingRepository::PAID)
-            ->getQuery()
-            ->execute();
+        return $this->findBy(['stateOrder' => OrderDropShippingRepository::PAID]);
     }
 
-    private function getOneOrderDropShipping(int $orderDropShippingId)
+    /**
+     * @param int $orderId
+     * @param int $articleId
+     * @return array
+     * @throws EntityNotFoundException
+     */
+    public function getOrdersDropShippingWithOrderIdOrFail(int $orderId, int $articleId)
     {
-        return $this->findOneBy(['id' => $orderDropShippingId]);
+        $orders = $this->findBy(['orderId' => $orderId, 'articleId' => $articleId]);
+
+        if (empty($orders)){
+            throw new EntityNotFoundException();
+        }
+
+        return $orders;
     }
+
+    /**
+     * @param OrderDropShipping $orderDropShipping
+     * @return OrderDropShipping
+     * @throws \Doctrine\ORM\ORMException
+     * @throws \Doctrine\ORM\OptimisticLockException
+     */
+    public function flush(): void
+    {
+        $this->getEntityManager()->flush();
+    }
+
+
 }

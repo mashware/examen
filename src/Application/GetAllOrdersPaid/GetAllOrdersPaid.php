@@ -17,7 +17,7 @@ class GetAllOrdersPaid
     private $orderRepository;
     private $dataTransform;
 
-    public function __construct(OrderDropShippingDoctrineRepository $orderRepository, DataTransform $dataTransform)
+    public function __construct(OrderDropShippingDoctrineRepository $orderRepository, GetAllOrdersPaidDataTransform $dataTransform)
     {
         $this->orderRepository = $orderRepository;
         $this->dataTransform = $dataTransform;

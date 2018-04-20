@@ -9,7 +9,7 @@
 namespace App\Application\GetAllOrdersPaid;
 
 
-interface DataTransform
+interface GetAllOrdersPaidDataTransform
 {
     public function transform($orders);
 }

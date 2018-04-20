@@ -8,7 +8,7 @@
 
 namespace App\Application\GetAllOrdersPaid;
 
-class DataTransformJSON implements DataTransform
+class GetAllOrdersPaidDataTransformJSON implements GetAllOrdersPaidDataTransform
 {
 
     public function transform($orders)
@@ -21,7 +21,6 @@ class DataTransformJSON implements DataTransform
                 "date_sincronize" => $order->getDateSync()
             ];
         }
-
-        return json_encode($arrayOrders);
+        return $arrayOrders;
     }
 }
