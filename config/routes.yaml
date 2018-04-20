@@ -1,0 +1,7 @@
+index:
+    path: /order/dropshipping
+    controller: App\Infrastructure\Controller\DropShippingController::index
+
+reset:
+    path: /order/dropshipping/{id}/article/{nombre}/reset
+    controller: App\Infrastructure\Controller\DropShippingController::reset
