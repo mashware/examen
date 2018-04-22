@@ -21,6 +21,7 @@ class GivenById
     }
 
     /**
+     * @param GivenByIdCommand $orderGivenByIdCommand
      * @return array
      * @throws \Exception
      */
@@ -30,9 +31,8 @@ class GivenById
             $orderGivenByIdCommand->id()
         );
 
-        return $this->orderGivenByIdTransform
-            ->transform(
-                $this->checkListOrders->execute($orders)
-            );
+        return $this->orderGivenByIdTransform->transform(
+            $this->checkListOrders->execute($orders)
+        );
     }
 }

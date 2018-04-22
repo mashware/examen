@@ -1,15 +1,24 @@
 order_status_paid_out:
     path: /order/dropshipping
     controller: Javier\Exam\Infrastructure\Controller\Order\DropShippingOrder::showOrdersPaidOut
+    methods: [GET]
 
 order_get_by_id:
     path: /order/dropshipping/{id}
     controller: Javier\Exam\Infrastructure\Controller\Order\DropShippingOrder::showOrderById
+    methods: [GET]
 
 reset_orders_get_by_id_article:
     path: /order/dropshipping/{id}/article/{article}/reset
     controller: Javier\Exam\Infrastructure\Controller\Order\DropShippingOrder::resetOrdersByIdAndArticle
+    methods: [GET]
 
 change_provider_orders_get_by_id_article:
     path: /order/dropshipping/{id}/article/{article}/provider/{provider}
     controller: Javier\Exam\Infrastructure\Controller\Order\DropShippingOrder::changeProviderOrdersByIdAndArticle
+    methods: [PUT]
+
+order_status_paid_out_paginate:
+    path: /order/dropshipping/page/{page}
+    controller: Javier\Exam\Infrastructure\Controller\Order\DropShippingOrder::showOrdersPaidOutPaginate
+    methods: [GET]

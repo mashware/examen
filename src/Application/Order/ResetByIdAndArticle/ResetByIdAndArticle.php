@@ -32,9 +32,8 @@ class ResetByIdAndArticle
             $resetOrdersGivenByIdAndArticleCommand->article()
         );
 
-        return $this->resetOrdersTransform
-            ->transform(
-                $this->checkListOrders->execute($orders)
-            );
+        return $this->resetOrdersTransform->transform(
+            $this->checkListOrders->execute($orders)
+        );
     }
 }

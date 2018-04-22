@@ -9,6 +9,9 @@ use Javier\Exam\Application\Order\GivenById\GivenById;
 use Javier\Exam\Application\Order\GivenById\GivenByIdCommand;
 use Javier\Exam\Application\Order\GivenById\GivenByIdTransform;
 use Javier\Exam\Application\Order\StatusPaidOut\StatusPaidOut;
+use Javier\Exam\Application\Order\StatusPaidOutPaginate\StatusPaidOutPaginate;
+use Javier\Exam\Application\Order\StatusPaidOutPaginate\StatusPaidOutPaginateCommand;
+use Javier\Exam\Application\Order\StatusPaidOutPaginate\StatusPaidOutPaginateTransform;
 use Javier\Exam\Application\Order\StatusPaidOut\StatusPaidOutTransform;
 use Javier\Exam\Application\Order\ResetByIdAndArticle\ResetByIdAndArticle;
 use Javier\Exam\Application\Order\ResetByIdAndArticle\ResetByIdAndArticleCommand;
@@ -119,6 +122,30 @@ class DropShippingOrder extends Controller
             $changeProviderByIdAndArticle->execute(
                 $changeProviderByIdAndArticleCommand
             )
+        );
+    }
+
+    /**
+     * @param CheckListOrdersIsNotFound $ordersIsNotFound
+     * @param Request $request
+     * @return Response
+     * @throws \Exception
+     */
+    public function showOrdersPaidOutPaginate(CheckListOrdersIsNotFound $ordersIsNotFound, Request $request): Response
+    {
+        $dropShippingRepository = $this->getDoctrine()->getRepository(DropShippingOrderEntity::class);
+        $ordersStatusPaidOutPaginateTransform = new StatusPaidOutPaginateTransform();
+        $ordersStatusPaidOutPaginate = new StatusPaidOutPaginate(
+            $dropShippingRepository,
+            $ordersIsNotFound,
+            $ordersStatusPaidOutPaginateTransform
+        );
+
+        $page = $request->get('page');
+        $statusPaidOutPaginateCommand = new StatusPaidOutPaginateCommand($page);
+
+        return $this->json(
+            $ordersStatusPaidOutPaginate->execute($statusPaidOutPaginateCommand)
         );
     }
 }

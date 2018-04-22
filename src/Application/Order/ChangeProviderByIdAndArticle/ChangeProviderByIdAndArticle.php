@@ -33,9 +33,8 @@ class ChangeProviderByIdAndArticle
             $changeProviderByIdAndArticleCommand->provider()
         );
 
-        return $this->changeProviderByIdAndArticleTransform
-            ->transform(
-                $this->checkListOrders->execute($orders)
-            );
+        return $this->changeProviderByIdAndArticleTransform->transform(
+            $this->checkListOrders->execute($orders)
+        );
     }
 }

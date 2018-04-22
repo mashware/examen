@@ -24,13 +24,12 @@ class StatusPaidOut
      * @return array
      * @throws \Exception
      */
-    public function execute(StatusPaidOutCommand $paidOutCommand): array
+    public function execute(): array
     {
         $orders = $this->dropShippingOrderRepository->showOrdersWithStatusPaidOut();
 
-        return $this->ordersStatusPaidOutTransform
-            ->transform(
-                $this->checkListOrders->execute($orders)
-            );
+        return $this->ordersStatusPaidOutTransform->transform(
+            $this->checkListOrders->execute($orders)
+        );
     }
 }
