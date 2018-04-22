@@ -49,7 +49,7 @@ class OrderEntityRepository extends EntityRepository implements OrderEntityRepos
     }
     */
 
-    public function createOrder(OrderEntity $orderEntity): void
+    public function persist(OrderEntity $orderEntity): void
     {
         $this->getEntityManager()->persist($orderEntity);
         $this->getEntityManager()->flush();
@@ -65,23 +65,20 @@ class OrderEntityRepository extends EntityRepository implements OrderEntityRepos
         return $qb->execute();
     }
 
-    public function reset(string $pedido, string $id_articulo): void
-    {
-        // TODO: Implement returnOrder() method.
-    }
 
     public function returnOrder(string $pedido): array
     {
-        // TODO: Implement returnOrder() method.
+        $qb = $this->createQueryBuilder('p')
+            ->select('p.pedido', 'p.estado', 'p.fecha_sincronizado')
+            ->andWhere('p.pedido = :order')
+            ->setParameter('order', $pedido)
+            ->getQuery();
+        return $qb->execute();
     }
 
     public function changeProvider(string $pedido, string $id_articulo, string $proveedor): void
     {
-        // TODO: Implement changeProvider() method.
-    }
 
-    public function paginateEx1()
-    {
-        // TODO: Implement paginateEx1() method.
     }
+    
 }

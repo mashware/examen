@@ -6,100 +6,26 @@
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Application/DropShipping/DropShipping.php" beforeDir="false" afterPath="$PROJECT_DIR$/Application/DropShipping/DropShipping.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/prueba.php" beforeDir="false" afterPath="$PROJECT_DIR$/Application/prueba.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services_test.yaml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/infrastructure/Repository/OrderEntityRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/Repository/OrderEntityRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phpunit.xml.dist" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ExamController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ExamController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Entity/OrderEntityRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Entity/OrderEntityRepositoryInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Service/EmptyValidator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Service/EmptyQueryOutputValidator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/ApiGamaBlancaProveedorEntityRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/OrderEntityRepository.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Application/DropShipping/DropShippingTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Application/DropShipping/DropShippingTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/PaginateEx1/paginateEx1.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/PaginateEx1/paginateEx1.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/app.db" beforeDir="false" afterPath="$PROJECT_DIR$/var/app.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bin/simple-phpunit" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/LICENSE" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Resources/config/dbal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Resources/config/dbal.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Resources/config/orm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Resources/config/orm.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/ocramius/package-versions/src/PackageVersions/Versions.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/package-versions/src/PackageVersions/Versions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/maker-bundle/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/maker-bundle/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/maker-bundle/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/maker-bundle/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/maker-bundle/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/maker-bundle/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/Doctrine/BaseRelation.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/Doctrine/BaseRelation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/Doctrine/DoctrineEntityDetails.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/Doctrine/DoctrineEntityHelper.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/Doctrine/DoctrineMetadataFactory.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/Doctrine/EntityRegenerator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/Doctrine/EntityRegenerator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/FileManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/FileManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/GeneratorTwigHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/GeneratorTwigHelper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/Maker/MakeCrud.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/Maker/MakeCrud.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/Maker/MakeEntity.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/Maker/MakeEntity.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/Maker/MakeForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/Maker/MakeForm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/Resources/config/makers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/Resources/config/makers.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/Resources/config/services.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/Resources/config/services.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/Resources/skeleton/controller/twig_template.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/Resources/skeleton/controller/twig_template.tpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/Test/MakerTestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/Test/MakerTestCase.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/Test/MakerTestDetails.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/Test/MakerTestDetails.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/Util/ClassSourceManipulator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/Util/ClassSourceManipulator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/ClockMock.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/CoverageListener.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/DeprecationErrorHandler.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/DnsMock.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/Legacy/Command.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/Legacy/CoverageListenerForV5.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/Legacy/CoverageListenerForV6.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/Legacy/CoverageListenerForV7.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/Legacy/CoverageListenerTrait.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/Legacy/SymfonyTestsListenerForV5.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/Legacy/SymfonyTestsListenerForV6.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/Legacy/SymfonyTestsListenerForV7.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/Legacy/SymfonyTestsListenerTrait.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/Legacy/TestRunner.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/SymfonyTestsListener.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/Tests/CoverageListenerTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/Tests/DeprecationErrorHandler/default.phpt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/Tests/DeprecationErrorHandler/deprecation.phar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/Tests/DeprecationErrorHandler/deprecation/deprecation.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/Tests/DeprecationErrorHandler/disabled.phpt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/Tests/DeprecationErrorHandler/fake_vendor/acme/lib/deprecation_riddled.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/Tests/DeprecationErrorHandler/fake_vendor/autoload.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/Tests/DeprecationErrorHandler/fake_vendor/composer/autoload_real.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/Tests/DeprecationErrorHandler/fake_vendor/composer/installed.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/Tests/DeprecationErrorHandler/generate_phar.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/Tests/DeprecationErrorHandler/regexp.phpt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/Tests/DeprecationErrorHandler/shutdown_deprecations.phpt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/Tests/DeprecationErrorHandler/weak.phpt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/Tests/DeprecationErrorHandler/weak_vendors_on_eval_d_deprecation.phpt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/Tests/DeprecationErrorHandler/weak_vendors_on_non_vendor.phpt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/Tests/DeprecationErrorHandler/weak_vendors_on_phar_deprecation.phpt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/Tests/DeprecationErrorHandler/weak_vendors_on_vendor.phpt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/Tests/DnsMockTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/Tests/Fixtures/coverage/phpunit-with-listener.xml.dist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/Tests/Fixtures/coverage/phpunit-without-listener.xml.dist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/Tests/Fixtures/coverage/src/BarCov.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/Tests/Fixtures/coverage/src/FooCov.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/Tests/Fixtures/coverage/tests/BarCovTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/Tests/Fixtures/coverage/tests/CoversDefaultClassTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/Tests/Fixtures/coverage/tests/CoversNothingTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/Tests/Fixtures/coverage/tests/CoversTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/Tests/Fixtures/coverage/tests/SutNotFindTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/Tests/Fixtures/coverage/tests/bootstrap.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/Tests/ProcessIsolationTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/TextUI/Command.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/TextUI/TestRunner.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/bin/simple-phpunit" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/bootstrap.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/composer.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/phpunit.xml.dist" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -108,7 +34,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" doNotAsk="true">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="DatabaseView">
@@ -150,42 +76,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="routes.yaml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/routes.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="13" column="46" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ExamController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/ExamController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="41" column="41" lean-forward="true" selection-start-line="41" selection-start-column="41" selection-end-line="41" selection-end-column="41" />
+            <state relative-caret-position="-476">
+              <caret line="41" column="10" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
               <folding>
                 <element signature="e#34#79#0#PHP" expanded="true" />
+                <element signature="e#2370#2405#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DropShipping.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/DropShipping/DropShipping.php">
+      <file leaf-file-name="ResetService.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Domain/Service/ResetService.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="33" column="50" lean-forward="true" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
+            <state relative-caret-position="272">
+              <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DropShippingReset.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/DropShipping/DropShippingReset.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="194">
+              <caret line="37" column="40" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
               <folding>
                 <element signature="e#130#178#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routing.yaml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/packages/dev/routing.yaml">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="order_entity" pinned="false" current-in-tab="false">
@@ -197,47 +119,62 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderEntity.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Domain/Entity/OrderEntity.php">
+      <file leaf-file-name="DropShipping.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/DropShipping/DropShipping.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-170">
-              <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+            <state relative-caret-position="187">
+              <caret line="31" column="40" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
+              <folding>
+                <element signature="e#130#178#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="paginateEx1.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/PaginateEx1/paginateEx1.html.twig">
+      <file leaf-file-name="EmptyQueryOutputValidator.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Domain/Service/EmptyQueryOutputValidator.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+            <state relative-caret-position="170">
+              <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
+      <file leaf-file-name="EmptyEntityValidator.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Domain/Service/EmptyEntityValidator.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+              <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EmptyValidator.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Domain/Service/EmptyValidator.php">
+      <file leaf-file-name="DropShippingReturnOrder.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/DropShipping/DropShippingReturnOrder.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+            <state relative-caret-position="140">
+              <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
+              <folding>
+                <element signature="e#130#178#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataTransformerReturnPaidOrders.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Domain/Service/DataTransformerReturnPaidOrders.php">
+      <file leaf-file-name="prueba.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/prueba.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+            <state relative-caret-position="102">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrderEntityRepository.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/infrastructure/Repository/OrderEntityRepository.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="82" column="4" selection-start-line="82" selection-start-column="4" selection-end-line="82" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -265,11 +202,9 @@
         <option value="$PROJECT_DIR$/public/pruebas.php" />
         <option value="$PROJECT_DIR$/src/Controller/Util/fillTableOrderEntity.php" />
         <option value="$PROJECT_DIR$/src/Domain/Entity/DropShipping/OrderEntity.php" />
-        <option value="$PROJECT_DIR$/src/Domain/Entity/OrderEntityRepositoryInterface.php" />
         <option value="$PROJECT_DIR$/src/Repository/ApiGamaBlancaProveedorEntityRepository.php" />
         <option value="$PROJECT_DIR$/Application/UseCase.php" />
         <option value="$PROJECT_DIR$/Application/DropShipping.php" />
-        <option value="$PROJECT_DIR$/src/Domain/Service/EmptyValidator.php" />
         <option value="$PROJECT_DIR$/src/Repository/OrderEntityRepository.php" />
         <option value="$PROJECT_DIR$/src/Controller/Util/FillTableOrderEntity.php" />
         <option value="$PROJECT_DIR$/src/Domain/Entity/OrderEntity.php" />
@@ -280,13 +215,20 @@
         <option value="$PROJECT_DIR$/tests/Application/DropShipping/DropShippingTest.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/src/Controller/Util/DataTransformerReturnPaidOrders.php" />
-        <option value="$PROJECT_DIR$/infrastructure/Repository/OrderEntityRepository.php" />
-        <option value="$PROJECT_DIR$/Application/prueba.php" />
         <option value="$PROJECT_DIR$/src/Domain/Service/DataTransformerReturnPaidOrders.php" />
-        <option value="$PROJECT_DIR$/config/routes.yaml" />
-        <option value="$PROJECT_DIR$/Application/DropShipping/DropShipping.php" />
-        <option value="$PROJECT_DIR$/src/Controller/ExamController.php" />
         <option value="$PROJECT_DIR$/templates/PaginateEx1/paginateEx1.html.twig" />
+        <option value="$PROJECT_DIR$/config/routes.yaml" />
+        <option value="$PROJECT_DIR$/src/Domain/Service/ResetService.php" />
+        <option value="$PROJECT_DIR$/src/Domain/Entity/OrderEntityRepositoryInterface.php" />
+        <option value="$PROJECT_DIR$/src/Domain/Service/Interfaces/Validable.php" />
+        <option value="$PROJECT_DIR$/src/Domain/Service/EmptyValidator.php" />
+        <option value="$PROJECT_DIR$/src/Domain/Service/EmptyEntityValidator.php" />
+        <option value="$PROJECT_DIR$/src/Controller/ExamController.php" />
+        <option value="$PROJECT_DIR$/Application/DropShipping/DropShippingReset.php" />
+        <option value="$PROJECT_DIR$/Application/DropShipping/DropShipping.php" />
+        <option value="$PROJECT_DIR$/Application/DropShipping/DropShippingReturnOrder.php" />
+        <option value="$PROJECT_DIR$/Application/prueba.php" />
+        <option value="$PROJECT_DIR$/infrastructure/Repository/OrderEntityRepository.php" />
       </list>
     </option>
   </component>
@@ -378,13 +320,18 @@
       <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
       <path value="$PROJECT_DIR$/vendor/symfony/routing" />
       <path value="$PROJECT_DIR$/vendor/symfony/orm-pack" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/vendor/symfony/web-profiler-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/stopwatch" />
+      <path value="$PROJECT_DIR$/vendor/symfony/profiler-pack" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-1" />
-    <option name="y" value="-779" />
+    <option name="y" value="-772" />
     <option name="width" value="1368" />
-    <option name="height" value="780" />
+    <option name="height" value="773" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -488,6 +435,12 @@
             <path>
               <item name="examen" type="b2602c69:ProjectViewProjectNode" />
               <item name="examen" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="routes" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="examen" type="b2602c69:ProjectViewProjectNode" />
+              <item name="examen" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="infrastructure" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -538,7 +491,9 @@
               <item name="examen" type="b2602c69:ProjectViewProjectNode" />
               <item name="examen" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Repository" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Domain" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Service" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Interfaces" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="examen" type="b2602c69:ProjectViewProjectNode" />
@@ -645,14 +600,13 @@
       <workItem from="1524158142466" duration="3592000" />
       <workItem from="1524165470434" duration="298000" />
       <workItem from="1524213411287" duration="11198000" />
-      <workItem from="1524239733351" duration="10237000" />
+      <workItem from="1524239733351" duration="10474000" />
+      <workItem from="1524374620200" duration="672000" />
+      <workItem from="1524375908560" duration="15000000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DropShippingTest - 2018.04.19 at 19h 48m 34s.xml">
-      <configuration name="DropShippingTest" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
     <history-entry file="DropShippingTest - 2018.04.19 at 19h 48m 53s.xml">
       <configuration name="DropShippingTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
@@ -680,35 +634,38 @@
     <history-entry file="DropShippingTest - 2018.04.19 at 21h 22m 23s.xml">
       <configuration name="DropShippingTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
+    <history-entry file="DropShippingTest - 2018.04.22 at 07h 46m 58s.xml">
+      <configuration name="DropShippingTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49551000" />
+    <option name="totallyTimeSpent" value="65460000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-779" width="1368" height="780" extended-state="6" />
+    <frame x="-1" y="-772" width="1368" height="773" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5032017" side_tool="true" weight="0.32960895" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4967983" weight="0.32917318" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49786553" weight="0.32761312" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49786553" weight="0.21684867" />
       <window_info anchor="right" id="Remote Host" order="3" />
       <window_info anchor="bottom" id="Database Console" order="9" visible="true" weight="0.32917318" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25340393" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26096824" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.24886535" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32917318" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -718,48 +675,18 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Domain/Service/DataTransformerReturnPaidOrders.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/prueba.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
-          <folding>
-            <element signature="e#86#120#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/EntityRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="63" selection-start-line="63" selection-end-line="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/Util/FillTableOrderEntity.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="23" column="63" selection-start-line="23" selection-start-column="63" selection-end-line="23" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/ExamController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="782">
           <caret line="46" column="5" lean-forward="true" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
           <folding>
             <element signature="e#34#79#0#PHP" expanded="true" />
+            <element signature="e#2370#2405#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Domain/Service/EmptyValidator.php">
+    <entry file="file://$PROJECT_DIR$/src/Domain/Service/EmptyQueryOutputValidator.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
@@ -851,21 +778,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Domain/Entity/OrderEntityRepositoryInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/phpunit.xml.dist" />
-    <entry file="file://$PROJECT_DIR$/src/Domain/prueba.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Domain/prueba.php" />
     <entry file="file://$PROJECT_DIR$/tests/Application/DropShipping/DropShippingTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -914,13 +828,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Repository/PruebaRepository.php" />
-    <entry file="file://$PROJECT_DIR$/infrastructure/Repository/OrderEntityRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/Util/FillTableOrderEntity.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -942,13 +849,84 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/prueba.php">
+    <entry file="file://$PROJECT_DIR$/src/Domain/Service/DataTransformerReturnPaidOrders.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+        <state relative-caret-position="153">
+          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/PaginateEx1/paginateEx1.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-34">
+          <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Domain/Entity/OrderEntity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-493">
+          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Domain/Entity/OrderEntityRepositoryInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Domain/Service/Interfaces/Validable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Domain/Service/EmptyQueryOutputValidator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Domain/Service/EmptyEntityValidator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/ExamController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-476">
+          <caret line="41" column="10" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
           <folding>
-            <element signature="e#86#120#0#PHP" expanded="true" />
+            <element signature="e#34#79#0#PHP" expanded="true" />
+            <element signature="e#2370#2405#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Domain/Service/ResetService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -959,68 +937,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Domain/Service/EmptyValidator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Domain/Service/DataTransformerReturnPaidOrders.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Domain/Entity/OrderEntity.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-170">
-          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/packages/dev/routing.yaml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="13" column="46" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/DropShipping/DropShipping.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="33" column="50" lean-forward="true" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
+        <state relative-caret-position="187">
+          <caret line="31" column="40" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
           <folding>
             <element signature="e#130#178#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/ExamController.php">
+    <entry file="file://$PROJECT_DIR$/Application/DropShipping/DropShippingReset.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="41" column="41" lean-forward="true" selection-start-line="41" selection-start-column="41" selection-end-line="41" selection-end-column="41" />
+        <state relative-caret-position="194">
+          <caret line="37" column="40" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
           <folding>
-            <element signature="e#34#79#0#PHP" expanded="true" />
+            <element signature="e#130#178#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
+    <entry file="file://$PROJECT_DIR$/Application/DropShipping/DropShippingReturnOrder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="140">
+          <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
+          <folding>
+            <element signature="e#130#178#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/PaginateEx1/paginateEx1.html.twig">
+    <entry file="file://$PROJECT_DIR$/Application/prueba.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+        <state relative-caret-position="102">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/infrastructure/Repository/OrderEntityRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="82" column="4" selection-start-line="82" selection-start-column="4" selection-end-line="82" selection-end-column="4" />
         </state>
       </provider>
     </entry>

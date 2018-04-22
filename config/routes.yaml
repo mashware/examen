@@ -10,6 +10,23 @@ exercise1:
     path: /order/dropshipping
     controller: App\Controller\ExamController::returnPaidOrders
 
+exercise2:
+    path: /order/dropshipping/{order}/article/{article}/reset
+    controller: App\Controller\ExamController::reset
+
+exercise3:
+    path: /order/dropshipping/{order}
+    controller: App\Controller\ExamController::returnOrder
+    requirements:
+               order: '\d+'
+
+exercise4:
+    path: /order/dropshipping/{order}/article/{article}
+    controller: App\Controller\ExamController::updateProvider
+    requirements:
+               provider: '\d+'
+
+
 paginateex1:
    path: /order/dropshipping/paginateEx1/{page}
    controller: App\Controller\ExamController::paginateEx1
@@ -17,7 +34,4 @@ paginateex1:
    requirements:
            page: '\d+'
 
-reset:
-    path: /order/dropshipping/{order}/article/{article}
-    controller: App\Controller\ExamController::reset
 

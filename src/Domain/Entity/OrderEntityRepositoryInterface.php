@@ -12,7 +12,7 @@ namespace App\Domain\Entity;
 interface OrderEntityRepositoryInterface
 
 {
-    public function createOrder(OrderEntity $orderEntity): void;
+    public function persist(OrderEntity $orderEntity): void;
 
     public function returnPaidOrders(): array;
 

@@ -10,19 +10,28 @@ namespace Application\DropShipping;
 
 use App\Domain\Entity\EmptyQueryOutputException;
 use App\Domain\Service\DataTransformerReturnPaidOrders;
-use App\Domain\Service\EmptyValidator;
+use App\Domain\Service\EmptyQueryOutputValidator;
+use App\Domain\Service\Interfaces\Validable;
 use Infrastructure\Repository\OrderEntityRepository;
 
 class DropShipping
 {
-
+    /**
+     * @var OrderEntityRepository
+     */
     private $orderEntityRepository;
     public function __construct(OrderEntityRepository $orderEntityRepository)
     {
         $this->orderEntityRepository = $orderEntityRepository;
     }
 
-    public function execute(EmptyValidator $emptyValidator, DataTransformerReturnPaidOrders $dataTransformerReturnPaidOrders): array
+    /**
+     * @param Validable $validator
+     * @param DataTransformerReturnPaidOrders $dataTransformerReturnPaidOrders
+     * @return array
+     * @throws EmptyQueryOutputException
+     */
+    public function execute(Validable $validator, DataTransformerReturnPaidOrders $dataTransformerReturnPaidOrders): array
     {
         $queryOutput = $dataTransformerReturnPaidOrders
             ->execute(
@@ -30,7 +39,7 @@ class DropShipping
                 ->returnPaidOrders()
             );
 
-        if ($emptyValidator->execute($queryOutput)) {
+        if ($validator->validate($queryOutput)) {
             throw new EmptyQueryOutputException();
         }
 
