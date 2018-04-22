@@ -10,9 +10,7 @@ use App\Domain\Service\EmptyQueryOutputValidator;
 use App\Domain\Service\ResetService;
 use Application\DropShipping\DropShippingReset;
 use Application\DropShipping\DropShippingReturnOrder;
-use Infrastructure\Repository\OrderEntityRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Application\DropShipping\DropShipping;
 
@@ -74,7 +72,6 @@ class ExamController extends Controller
         ]);
 
         return $this->json($product->getFechaEntregaPrevista());
-
     }
 
     public function paginateEx1($page): Response

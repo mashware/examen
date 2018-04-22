@@ -16,11 +16,8 @@ interface OrderEntityRepositoryInterface
 
     public function returnPaidOrders(): array;
 
-    public function reset(string $pedido, string $id_articulo): void;
-
     public function returnOrder(string $pedido): array;
 
     public function changeProvider(string $pedido, string $id_articulo, string $proveedor): void;
 
-    public function paginateEx1();
 }
