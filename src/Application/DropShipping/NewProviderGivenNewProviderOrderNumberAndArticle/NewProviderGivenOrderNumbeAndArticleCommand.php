@@ -21,7 +21,7 @@ class NewProviderGivenOrderNumbeAndArticleCommand
      * @param $article
      * @param $provider
      */
-    public function __construct(int $orderNumber, int $article, int $provider)
+    public function __construct(int $orderNumber, int $article, $provider)
     {
         $this->orderNumber = $orderNumber;
         $this->article = $article;
@@ -47,7 +47,7 @@ class NewProviderGivenOrderNumbeAndArticleCommand
     /**
      * @return mixed
      */
-    public function getProvider(): int
+    public function getProvider()
     {
         return $this->provider;
     }

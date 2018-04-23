@@ -27,6 +27,7 @@ use App\Infrastructure\Repository\DropShippingPedidosDoctrineRepository;
 use Doctrine\ORM\EntityManager;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 
 
 class DropShippingOrderController extends Controller
@@ -48,7 +49,7 @@ class DropShippingOrderController extends Controller
         return $this->json($dataToShow);
     }
 
-    public function listAllPaidStatus()
+    public function listAllPaidStatusByPage(int $page = 1)
     {
         $listAllPaidDropShippingApplication = new ListAllPaidDropShippingApplication(
             new DataTransformToArrayForAllList(),
@@ -57,7 +58,7 @@ class DropShippingOrderController extends Controller
         );
 
         $dataToShow = $listAllPaidDropShippingApplication
-            ->handle(new ListAllPaidCommand());
+            ->handle(new ListAllPaidCommand($page));
 
 
         return $this->json($dataToShow);
@@ -107,8 +108,9 @@ class DropShippingOrderController extends Controller
         return $this->json($dataToShow);
     }
 
-    public function changeProvider(int $orderNumber, int $article, int $provider)
+    public function changeProvider(int $orderNumber, int $article, Request $request)
     {
+         $provider = $request->request->get('provider');
         $listByOrderNumberAndArticle = new NewProviderGivenNewProviderOrderNumberAndArticle(
             $this->sendRepository()
         );

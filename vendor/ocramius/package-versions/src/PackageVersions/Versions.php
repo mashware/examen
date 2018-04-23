@@ -75,11 +75,11 @@ final class Versions
   'symfony/var-dumper' => 'v4.0.8@e1b4d008100f4d203cc38b0d793ad6252d8d8af0',
   'symfony/web-profiler-bundle' => 'v4.0.8@4f6a1f77120b5e4b37c59db34a8dc0a4d3df5cf0',
   'symfony/web-server-bundle' => 'v4.0.8@20ad52df8164d2eae029e6bb24356956c52380be',
-  'symfony/polyfill-iconv' => '*@',
-  'symfony/polyfill-php71' => '*@',
-  'symfony/polyfill-php70' => '*@',
-  'symfony/polyfill-php56' => '*@',
-  '__root__' => 'No version set (parsed as 1.0.0)@',
+  'symfony/polyfill-iconv' => '*@fbeb1154765f38a50011447b1af6918005cfe75c',
+  'symfony/polyfill-php71' => '*@fbeb1154765f38a50011447b1af6918005cfe75c',
+  'symfony/polyfill-php70' => '*@fbeb1154765f38a50011447b1af6918005cfe75c',
+  'symfony/polyfill-php56' => '*@fbeb1154765f38a50011447b1af6918005cfe75c',
+  '__root__' => 'dev-FranMoraton@fbeb1154765f38a50011447b1af6918005cfe75c',
 );
 
     private function __construct()

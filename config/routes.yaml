@@ -2,9 +2,13 @@ ListAllOrder:
     path: /order/dropshipping
     controller: App\Infrastructure\Controller\DropShippingOrderController::listAll
 
+ListAllPaidOrderredirect:
+    path: /order/dropshippingpaid
+    controller: App\Infrastructure\Controller\DropShippingOrderController::listAllPaidStatusByPage
+
 ListAllPaidOrder:
-    path: /order/dropshippingpaids
-    controller: App\Infrastructure\Controller\DropShippingOrderController::listAllPaidStatus
+    path: /order/dropshippingpaid/{page}/pg
+    controller: App\Infrastructure\Controller\DropShippingOrderController::listAllPaidStatusByPage
 
 listOneByOrderNumber:
     path: /order/dropshipping/{orderNumber}
@@ -13,12 +17,13 @@ listOneByOrderNumber:
 listByOrderNumberAndArticle:
     path: /order/dropshipping/order/{orderNumber}/article/{article}
     controller: App\Infrastructure\Controller\DropShippingOrderController::listByOrderNumberAndArticle
+    methods: [GET]
 
 resetByOrderNumberAndArticle:
     path: /order/dropshipping/order/{orderNumber}/article/{article}/reset
     controller: App\Infrastructure\Controller\DropShippingOrderController::resetByOrderNumberAndArticle
 
 NewProviderByNewProviderOrderNumberAndArticle:
-    path: /order/dropshipping/order/{orderNumber}/article/{article}/provider/{provider}
+    path: /order/dropshipping/order/{orderNumber}/article/{article}
     controller: App\Infrastructure\Controller\DropShippingOrderController::changeProvider
-
+    methods: [POST]

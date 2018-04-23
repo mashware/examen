@@ -58,12 +58,14 @@ class DropShippingPedidosDoctrineRepository extends ServiceEntityRepository impl
             ->execute();
     }
 
-    public function findAllPaidStatus(): array
+    public function findAllPaidStatusByPage(int $page): array
     {
         $query = $this->createQueryBuilder('dso')
             ->andWhere('dso.estado = :status')
             ->setParameter('status', "paid")
-            ->getQuery();
+            ->getQuery()
+            ->setFirstResult(10 * ($page - 1)) // set the offset
+            ->setMaxResults(10);;
         return $query->execute();
     }
 
