@@ -10,12 +10,18 @@ namespace App\Infrastructure\Controller;
 
 
 
+use App\Application\DropShipping\ListAll\ListAllCommand;
 use App\Application\DropShipping\ListAll\ListAllDropShippingApplication;
+use App\Application\DropShipping\ListAllPaid\ListAllPaidCommand;
 use App\Application\DropShipping\ListAllPaid\ListAllPaidDropShippingApplication;
 use App\Application\DropShipping\ListByOrderNumberAndArticle\ListByOrderNumberAndArticle;
+use App\Application\DropShipping\ListByOrderNumberAndArticle\ListByOrderNumberAndArticleCommand;
+use App\Application\DropShipping\ListOneByOrderNumber\ListByOrderNumberCommand;
 use App\Application\DropShipping\ListOneByOrderNumber\ListOneDropShippingApplicationOrder;
 use App\Application\DropShipping\NewProviderGivenNewProviderOrderNumberAndArticle\NewProviderGivenNewProviderOrderNumberAndArticle;
-use App\Application\DropShipping\resetOrderGivenNumberAndArticle\resetOrderGivenNumberAndArticle;
+use App\Application\DropShipping\NewProviderGivenNewProviderOrderNumberAndArticle\NewProviderGivenOrderNumbeAndArticleCommand;
+use App\Application\DropShipping\resetOrderGivenNumberAndArticle\ResetOrderGivenNumberAndArticle;
+use App\Application\DropShipping\resetOrderGivenNumberAndArticle\ResetOrderGivenNumberAndArticleCommand;
 use App\Application\DropShipping\Util\DataTransform\DataTransformToArrayForAllList;
 use App\Infrastructure\Repository\DropShippingPedidosDoctrineRepository;
 use Doctrine\ORM\EntityManager;
@@ -29,14 +35,14 @@ class DropShippingOrderController extends Controller
     public function listAll()
     {
 
-        $dropShippingRepository = $this->getDoctrine()->getRepository('App:DropShippingPedidos');
         $listAllDropShippingApplication = new ListAllDropShippingApplication(
             new DataTransformToArrayForAllList(),
-            $dropShippingRepository
+            $this->sendRepository()
 
         );
 
-        $dataToShow = $listAllDropShippingApplication->handle();
+        $dataToShow = $listAllDropShippingApplication
+            ->handle(new ListAllCommand());
 
 
         return $this->json($dataToShow);
@@ -44,15 +50,15 @@ class DropShippingOrderController extends Controller
 
     public function listAllPaidStatus()
     {
-        $dropShippingRepository = $this->getDoctrine()->getRepository('App:DropShippingPedidos');
         $listAllPaidDropShippingApplication = new ListAllPaidDropShippingApplication(
             new DataTransformToArrayForAllList(),
-            $dropShippingRepository
+            $this->sendRepository()
 
         );
 
-        $dataToShow = $listAllPaidDropShippingApplication->handle();
-        ;
+        $dataToShow = $listAllPaidDropShippingApplication
+            ->handle(new ListAllPaidCommand());
+
 
         return $this->json($dataToShow);
     }
@@ -60,15 +66,15 @@ class DropShippingOrderController extends Controller
     public function listOneByOrderNumber(int $orderNumber)
     {
 
-        $dropShippingRepository = $this->getDoctrine()->getRepository('App:DropShippingPedidos');
         $listOneDropShippingApplicationOrder = new ListOneDropShippingApplicationOrder(
             new DataTransformToArrayForAllList(),
-            $dropShippingRepository
+            $this->sendRepository()
 
         );
 
 
-        $dataToShow = $listOneDropShippingApplicationOrder->handle($orderNumber);
+        $dataToShow = $listOneDropShippingApplicationOrder
+            ->handle(new ListByOrderNumberCommand($orderNumber));
 
 
         return $this->json($dataToShow);
@@ -76,15 +82,14 @@ class DropShippingOrderController extends Controller
 
     public function listByOrderNumberAndArticle(int $orderNumber, int $article)
     {
-        $dropShippingRepository = $this->getDoctrine()->getRepository('App:DropShippingPedidos');
         $listByOrderNumberAndArticle = new ListByOrderNumberAndArticle(
             new DataTransformToArrayForAllList(),
-            $dropShippingRepository
-
+            $this->sendRepository()
         );
 
 
-        $dataToShow = $listByOrderNumberAndArticle->handle($orderNumber, $article);
+        $dataToShow = $listByOrderNumberAndArticle
+            ->handle(new ListByOrderNumberAndArticleCommand($orderNumber, $article));
 
 
         return $this->json($dataToShow);
@@ -92,31 +97,32 @@ class DropShippingOrderController extends Controller
 
     public function resetByOrderNumberAndArticle(int $orderNumber, int $article)
     {
-        $dropShippingRepository = $this->getDoctrine()->getRepository('App:DropShippingPedidos');
-        $listByOrderNumberAndArticle = new resetOrderGivenNumberAndArticle(
-            $dropShippingRepository
-
+        $listByOrderNumberAndArticle = new ResetOrderGivenNumberAndArticle(
+            $this->sendRepository()
         );
 
-
-        $dataToShow = $listByOrderNumberAndArticle->handle($orderNumber, $article);
-
+        $dataToShow = $listByOrderNumberAndArticle
+            ->handle(new ResetOrderGivenNumberAndArticleCommand($orderNumber, $article));
 
         return $this->json($dataToShow);
     }
 
     public function changeProvider(int $orderNumber, int $article, int $provider)
     {
-        $dropShippingRepository = $this->getDoctrine()->getRepository('App:DropShippingPedidos');
         $listByOrderNumberAndArticle = new NewProviderGivenNewProviderOrderNumberAndArticle(
-            $dropShippingRepository
-
+            $this->sendRepository()
         );
 
-
-        $dataToShow = $listByOrderNumberAndArticle->handle($orderNumber, $article, $provider);
-
+        $dataToShow = $listByOrderNumberAndArticle
+            ->handle(
+                new NewProviderGivenOrderNumbeAndArticleCommand($orderNumber, $article, $provider)
+            );
 
         return $this->json($dataToShow);
+    }
+
+    private function sendRepository()
+    {
+         return $this->getDoctrine()->getRepository('App:DropShippingPedidos');
     }
 }

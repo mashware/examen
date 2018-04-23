@@ -26,7 +26,7 @@ class ListAllDropShippingApplication
         $this->dropShippingRepository = $dropShippingPedidosDoctrineRepository;
     }
 
-    public function handle(): array
+    public function handle(ListAllCommand $listAllCommand): array
     {
         $dropShippingOrders = $this->dropShippingRepository->findAll();
         $dropShippingOrders = $this->DataTransformToArrayForAllList

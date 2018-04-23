@@ -25,18 +25,22 @@ class NewProviderGivenNewProviderOrderNumberAndArticle
     }
 
     /**
-     * @param int $orderNumber
-     * @param int $article
-     * @param int $provider
      * @return array|DropShippingPedidos[] $dropShippingOrders
      */
-    public function handle(int $orderNumber, int $article, int $provider): array
-    {
+    public function handle(
+        NewProviderGivenOrderNumbeAndArticleCommand $newProviderGivenOrderNumbeAndArticleCommand
+    ): array {
 
-        $dropShippingOrders = $this->dropShippingRepository->findByOrderNumberAndArticle($orderNumber, $article);
+        $dropShippingOrders = $this->dropShippingRepository
+            ->findByOrderNumberAndArticle(
+                $newProviderGivenOrderNumbeAndArticleCommand->getOrderNumber(),
+                $newProviderGivenOrderNumbeAndArticleCommand->getArticle()
+            );
 
         foreach ($dropShippingOrders as $order) {
-            $order->setIdProveedor($provider);
+            $order->setIdProveedor(
+                $newProviderGivenOrderNumbeAndArticleCommand->getProvider()
+            );
 
             $this->dropShippingRepository->persistAndFlush($order);
         }

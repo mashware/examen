@@ -25,7 +25,7 @@ class ListAllPaidDropShippingApplication
         $this->dropShippingRepository = $dropShippingPedidosDoctrineRepository;
     }
 
-    public function handle(): array
+    public function handle(ListAllPaidCommand $listAllPaidCommand): array
     {
         $dropShippingOrders = $this->dropShippingRepository->findAllPaidStatus();
         $dropShippingOrders = $this->DataTransformToArrayForAllList

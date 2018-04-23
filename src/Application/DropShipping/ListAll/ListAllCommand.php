@@ -9,7 +9,7 @@
 namespace App\Application\DropShipping\ListAll;
 
 
-class ListAllCommandHandler
+class ListAllCommand
 {
 
 }

@@ -25,9 +25,13 @@ class ListByOrderNumberAndArticle
         $this->dropShippingRepository = $dropShippingDoctrineRepository;
     }
 
-    public function handle(int $orderNumber, int $article): array
+    public function handle(ListByOrderNumberAndArticleCommand $listByOrderNumberAndArticleCommand): array
     {
-        $dropShippingOrders = $this->dropShippingRepository->findByOrderNumberAndArticle($orderNumber, $article);
+        $dropShippingOrders = $this->dropShippingRepository
+            ->findByOrderNumberAndArticle(
+                $listByOrderNumberAndArticleCommand->getOrderNumber(),
+                $listByOrderNumberAndArticleCommand->getArticle()
+            );
         $dropShippingOrders = $this->dataTransformToArray
             ->execute($dropShippingOrders);
 

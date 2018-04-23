@@ -12,7 +12,7 @@ namespace App\Application\DropShipping\resetOrderGivenNumberAndArticle;
 use App\Domain\Model\Entity\DropShippingPedidos;
 use App\Domain\Model\Entity\Interfaces\DropShippingPedidosRepositoryInterface;
 
-class resetOrderGivenNumberAndArticle
+class ResetOrderGivenNumberAndArticle
 {
 
     private $dropShippingRepository;
@@ -24,14 +24,16 @@ class resetOrderGivenNumberAndArticle
     }
 
     /**
-     * @param int $orderNumber
-     * @param int $article
      * @return array|DropShippingPedidos[] $dropShippingOrders
      */
-    public function handle(int $orderNumber, int $article): array
+    public function handle(ResetOrderGivenNumberAndArticleCommand $resetOrderGivenNumberAndArticleCommand): array
     {
 
-        $dropShippingOrders = $this->dropShippingRepository->findByOrderNumberAndArticle($orderNumber, $article);
+        $dropShippingOrders = $this->dropShippingRepository
+            ->findByOrderNumberAndArticle(
+                $resetOrderGivenNumberAndArticleCommand->getOrderNumber(),
+                $resetOrderGivenNumberAndArticleCommand->getArticle()
+            );
 
         foreach ($dropShippingOrders as $order) {
             $order->setEstado("nuevo");

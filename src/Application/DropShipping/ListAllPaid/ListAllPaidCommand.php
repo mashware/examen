@@ -9,7 +9,7 @@
 namespace App\Application\DropShipping\ListAllPaid;
 
 
-class ListAllPaidCommandHandler
+class ListAllPaidCommand
 {
 
 }
