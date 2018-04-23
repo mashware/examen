@@ -6,7 +6,7 @@
  * Time: 13:15
  */
 
-namespace Application\DropShipping;
+namespace Application\DropShipping\DropShippingReturnOrder;
 
 use Assert\Assertion;
 

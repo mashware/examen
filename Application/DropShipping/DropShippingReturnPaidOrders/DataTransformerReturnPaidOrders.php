@@ -6,10 +6,11 @@
  * Time: 10:42
  */
 
-namespace Application\DropShipping;
+namespace Application\DropShipping\DropShippingReturnPaidOrders;
 
+use Application\DropShipping\DropShippingReturnPaidOrders\Interfaces\DataTransformerReturnPaidOrdersInterface;
 
-class DataTransformerReturnPaidOrders
+class DataTransformerReturnPaidOrders implements DataTransformerReturnPaidOrdersInterface
 {
     public function execute(array $dataInput): array
     {

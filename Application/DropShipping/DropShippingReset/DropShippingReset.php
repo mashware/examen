@@ -6,7 +6,7 @@
  * Time: 13:12
  */
 
-namespace Application\DropShipping;
+namespace Application\DropShipping\DropShippingReset;
 
 use Infrastructure\Repository\OrderEntityRepository;
 

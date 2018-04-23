@@ -4,26 +4,26 @@ namespace App\Controller;
 
 use App\Controller\Util\FillTableOrderEntity;
 use App\Domain\Entity\OrderEntity;
-use Application\DropShipping\DataTransformerPaginateEx1;
-use Application\DropShipping\DataTransformerReturnPaidOrders;
-use Application\DropShipping\DropShippingReset;
-use Application\DropShipping\DropShippingResetCommand;
-use Application\DropShipping\DropShippingReturnOrder;
-use Application\DropShipping\DropShippingReturnOrderCommand;
-use Application\DropShipping\DropShippingUpdateProvider;
-use Application\DropShipping\DropShippingUpdateProviderCommand;
+use Application\DropShipping\DropShippingPaginateEx1\DataTransformerPaginateEx1;
+use Application\DropShipping\DropShippingReturnPaidOrders\DataTransformerReturnPaidOrders;
+use Application\DropShipping\DropShippingPaginateEx1\DropShippingPaginateEx1;
+use Application\DropShipping\DropShippingPaginateEx1\DropShippingPaginateEx1Command;
+use Application\DropShipping\DropShippingReset\DropShippingReset;
+use Application\DropShipping\DropShippingReset\DropShippingResetCommand;
+use Application\DropShipping\DropShippingReturnOrder\DropShippingReturnOrder;
+use Application\DropShipping\DropShippingReturnOrder\DropShippingReturnOrderCommand;
+use Application\DropShipping\DropShippingReturnPaidOrders\DropShippingReturnPaidOrders;
+use Application\DropShipping\DropShippingUpdateProvider\DropShippingUpdateProvider;
+use Application\DropShipping\DropShippingUpdateProvider\DropShippingUpdateProviderCommand;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Application\DropShipping\DropShipping;
 
 class ExamController extends Controller
 {
-    public const NUMORDERSPERPAGE = 5;
-
     public function returnPaidOrders(): Response
     {
-        $dropShipping = new DropShipping(
+        $dropShipping = new DropShippingReturnPaidOrders(
             $this->getDoctrine()->getRepository(
                 OrderEntity::class
             ),
@@ -82,8 +82,24 @@ class ExamController extends Controller
 
     public function paginateEx1($page): Response
     {
-        $result = json_decode($this->returnPaidOrders()->getContent());
-        $result = (new DataTransformerPaginateEx1())->execute($result, $page);
+//        $result = json_decode($this->returnPaidOrders()->getContent());
+//        $result = (new DataTransformerPaginateEx1())->execute($result, $page);
+//
+//        return $this->render(
+//            'PaginateEx1/paginateEx1.html.twig',
+//            [
+//                'result' => $result,
+//                'page' => $page
+//            ]
+//        );
+
+        $dropShippingPaginateEx1 = new DropShippingPaginateEx1(
+            $this->getDoctrine()
+                ->getRepository(OrderEntity::class),
+            new DataTransformerPaginateEx1()
+        );
+
+        $result = $dropShippingPaginateEx1->execute(new DropShippingPaginateEx1Command($page));
 
         return $this->render(
             'PaginateEx1/paginateEx1.html.twig',

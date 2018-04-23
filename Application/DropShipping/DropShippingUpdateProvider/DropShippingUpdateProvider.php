@@ -6,7 +6,7 @@
  * Time: 10:28
  */
 
-namespace Application\DropShipping;
+namespace Application\DropShipping\DropShippingUpdateProvider;
 
 use Infrastructure\Repository\OrderEntityRepository;
 

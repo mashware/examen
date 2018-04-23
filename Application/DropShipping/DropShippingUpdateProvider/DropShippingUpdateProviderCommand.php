@@ -3,27 +3,31 @@
  * Created by PhpStorm.
  * User: programador
  * Date: 23/04/18
- * Time: 12:47
+ * Time: 13:06
  */
 
-namespace Application\DropShipping;
+namespace Application\DropShipping\DropShippingUpdateProvider;
 
 use Assert\Assertion;
 
-class DropShippingResetCommand
+class DropShippingUpdateProviderCommand
 {
     private $article;
     private $order;
+    private $provider;
 
-    public function __construct($order, $article)
+    public function __construct($order, $article, $provider)
     {
         Assertion::notBlank($order, 'Tienes que especificar un id de pedido');
         Assertion::numeric($order, 'El id del pedido no es un número');
         Assertion::notBlank($article, 'Tienes que especificar un id de artículo');
         Assertion::numeric($article, 'El id del artículo no es un número');
+        Assertion::notBlank($provider, 'Tienes que especificar un proveedor');
+        Assertion::numeric($provider, 'El proveedro no es un numero');
 
         $this->order = $order;
         $this->article = $article;
+        $this->provider = $provider;
     }
 
     /**
@@ -44,5 +48,15 @@ class DropShippingResetCommand
     public function getOrder()
     {
         return $this->order;
+    }
+
+    /**
+     * Get Provider
+     *
+     * @return mixed
+     */
+    public function getProvider()
+    {
+        return $this->provider;
     }
 }

@@ -6,11 +6,12 @@
  * Time: 13:12
  */
 
-namespace Application\DropShipping;
+namespace Application\DropShipping\DropShippingReturnPaidOrders;
 
+use Application\DropShipping\DropShippingReturnPaidOrders\Interfaces\DataTransformerReturnPaidOrdersInterface;
 use Infrastructure\Repository\OrderEntityRepository;
 
-class DropShipping
+class DropShippingReturnPaidOrders
 {
     private $orderEntityRepository;
     private $dataTransformerReturnPaidOrders;
@@ -23,7 +24,7 @@ class DropShipping
      */
     public function __construct(
         OrderEntityRepository $orderEntityRepository,
-        DataTransformerReturnPaidOrders $dataTransformerReturnPaidOrders
+        DataTransformerReturnPaidOrdersInterface $dataTransformerReturnPaidOrders
     ) {
         $this->orderEntityRepository = $orderEntityRepository;
         $this->dataTransformerReturnPaidOrders = $dataTransformerReturnPaidOrders;
