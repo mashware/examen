@@ -10,8 +10,8 @@ namespace App\Application\ResetAnOrderWithArticle;
 
 
 use App\Application\Services\ResetAnOrderWithParameters;
+use App\Domain\Entity\DropShipping\OrderNotFoundException;
 use App\Infrastructure\Entity\DropShipping\Repository\OrderDropShippingDoctrineRepository;
-use Doctrine\ORM\EntityNotFoundException;
 use Symfony\Component\HttpFoundation\Response;
 
 class ResetAnOrderWithArticle
@@ -42,8 +42,8 @@ class ResetAnOrderWithArticle
     {
         try {
             $arrayOrdersWithArticle = $this->orderRepository->getOrdersDropShippingWithOrderIdOrFail($command->getOrderId(), $command->getArticleId());
-        } catch (EntityNotFoundException $e) {
-            return $this->dataTransform->transform(['KO', Response::HTTP_NOT_FOUND]);
+        } catch (OrderNotFoundException $e) {
+            return $this->dataTransform->transform(['message' => 'KO', 'status' => Response::HTTP_NOT_FOUND]);
         }
 
         foreach ($arrayOrdersWithArticle as $orderArticle) {
@@ -52,6 +52,6 @@ class ResetAnOrderWithArticle
 
         $this->orderRepository->flush();
 
-        return $this->dataTransform->transform(['OK', Response::HTTP_OK]);
+        return $this->dataTransform->transform(['message' => 'OK', 'status' => Response::HTTP_OK]);
     }
 }

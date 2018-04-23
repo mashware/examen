@@ -2,18 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a4ad36e-6e39-4a08-b511-d50c674eab91" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Application/ResetAnOrderWithArticle/ResetAnOrderWithArticle.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Application/ResetAnOrderWithArticle/ResetAnOrderWithArticleCommand.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Application/ResetAnOrderWithArticle/ResetAnOrderWithArticleDataTransform.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Application/ResetAnOrderWithArticle/ResetAnOrderWithArticleDataTransformEmpty.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Application/Services/ResetAnOrderWithParameters.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Application/ChangeProviderFromOrderWithArticle/ChangeProviderFromOrderWithArticle.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Application/ChangeProviderFromOrderWithArticle/ChangeProviderFromOrderWithArticleCommand.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Application/ChangeProviderFromOrderWithArticle/ChangeProviderFromOrderWithArticleDataTransform.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Application/ChangeProviderFromOrderWithArticle/ChangeProviderFromOrderWithArticleDataTransformEmpty.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Application/GetAnOrderWithOrderId/GetAnOrderWithOrderId.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Application/GetAnOrderWithOrderId/GetAnOrderWithOrderIdCommand.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Application/GetAnOrderWithOrderId/GetAnOrderWithOrderIdDataTransform.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Application/GetAnOrderWithOrderId/GetAnOrderWithOrderIdDataTransformJSON.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Application/OrdersPerPage/OrdersPerPage.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Application/OrdersPerPage/OrdersPerPageCommand.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Application/OrdersPerPage/OrdersPerPageDataTransFormJSON.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Application/OrdersPerPage/OrdersPerPageDataTransform.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Domain/Entity/DropShipping/OrderNotFoundException.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
       <change beforePath="$PROJECT_DIR$/config/routes.yaml" afterPath="$PROJECT_DIR$/config/routes.yaml" />
-      <change beforePath="$PROJECT_DIR$/src/Application/GetAllOrdersPaid/DataTransform.php" afterPath="$PROJECT_DIR$/src/Application/GetAllOrdersPaid/GetAllOrdersPaidDataTransform.php" />
-      <change beforePath="$PROJECT_DIR$/src/Application/GetAllOrdersPaid/DataTransformJSON.php" afterPath="$PROJECT_DIR$/src/Application/GetAllOrdersPaid/GetAllOrdersPaidDataTransformJSON.php" />
-      <change beforePath="$PROJECT_DIR$/src/Application/GetAllOrdersPaid/GetAllOrdersPaid.php" afterPath="$PROJECT_DIR$/src/Application/GetAllOrdersPaid/GetAllOrdersPaid.php" />
+      <change beforePath="$PROJECT_DIR$/src/Application/ResetAnOrderWithArticle/ResetAnOrderWithArticle.php" afterPath="$PROJECT_DIR$/src/Application/ResetAnOrderWithArticle/ResetAnOrderWithArticle.php" />
       <change beforePath="$PROJECT_DIR$/src/Infrastructure/Controller/DropShippingController.php" afterPath="$PROJECT_DIR$/src/Infrastructure/Controller/DropShippingController.php" />
       <change beforePath="$PROJECT_DIR$/src/Infrastructure/Entity/DropShipping/Repository/OrderDropShippingDoctrineRepository.php" afterPath="$PROJECT_DIR$/src/Infrastructure/Entity/DropShipping/Repository/OrderDropShippingDoctrineRepository.php" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" afterPath="$PROJECT_DIR$/symfony.lock" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,6 +33,9 @@
   </component>
   <component name="ComposerSettings">
     <executablePath>composer</executablePath>
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Examen$ProviderTest.coverage" NAME="ProviderTest Coverage Results" MODIFIED="1524475844163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -55,63 +67,61 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ResetAnOrderWithArticle.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Application/ResetAnOrderWithArticle/ResetAnOrderWithArticle.php">
+      <file leaf-file-name="OrdersPerPage.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Application/OrdersPerPage/OrdersPerPage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="45" column="85" lean-forward="false" selection-start-line="45" selection-start-column="85" selection-end-line="45" selection-end-column="85" />
-              <folding>
-                <element signature="e#146#202#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="378">
+              <caret line="26" column="138" lean-forward="false" selection-start-line="26" selection-start-column="138" selection-end-line="26" selection-end-column="138" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ResetAnOrderWithArticleDataTransform.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Application/ResetAnOrderWithArticle/ResetAnOrderWithArticleDataTransform.php">
+      <file leaf-file-name="OrdersPerPageCommand.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Application/OrdersPerPage/OrdersPerPageCommand.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="26" column="34" lean-forward="true" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChangeProviderFromOrderWithArticleCommand.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Application/ChangeProviderFromOrderWithArticle/ChangeProviderFromOrderWithArticleCommand.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="296">
+              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="31" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrdersPerPageDataTransFormJSON.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Application/OrdersPerPage/OrdersPerPageDataTransFormJSON.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="27" column="9" lean-forward="false" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GetAnOrderWithOrderIdDataTransformJSON.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Application/GetAnOrderWithOrderId/GetAnOrderWithOrderIdDataTransformJSON.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="144">
-              <caret line="13" column="18" lean-forward="false" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+              <caret line="13" column="44" lean-forward="false" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="44" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ResetAnOrderWithArticleCommand.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Application/ResetAnOrderWithArticle/ResetAnOrderWithArticleCommand.php">
+      <file leaf-file-name="GetAnOrderWithOrderId.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Application/GetAnOrderWithOrderId/GetAnOrderWithOrderId.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="13" column="21" lean-forward="false" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ResetAnOrderWithArticleDataTransformEmpty.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Application/ResetAnOrderWithArticle/ResetAnOrderWithArticleDataTransformEmpty.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="15" column="22" lean-forward="false" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ResetAnOrderWithParameters.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Application/Services/ResetAnOrderWithParameters.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="20" column="55" lean-forward="false" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrderDropShippingDoctrineRepository.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Infrastructure/Entity/DropShipping/Repository/OrderDropShippingDoctrineRepository.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="34" column="9" lean-forward="true" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+            <state relative-caret-position="414">
+              <caret line="31" column="123" lean-forward="false" selection-start-line="31" selection-start-column="84" selection-end-line="31" selection-end-column="123" />
               <folding />
             </state>
           </provider>
@@ -120,39 +130,41 @@
       <file leaf-file-name="routes.yaml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/routes.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" column="65" lean-forward="false" selection-start-line="10" selection-start-column="65" selection-end-line="10" selection-end-column="65" />
+            <state relative-caret-position="144">
+              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DropShippingController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="OrderDropShippingDoctrineRepository.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Infrastructure/Entity/DropShipping/Repository/OrderDropShippingDoctrineRepository.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-662">
+              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="19" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DropShippingController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Infrastructure/Controller/DropShippingController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="36" column="5" lean-forward="false" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+            <state relative-caret-position="432">
+              <caret line="89" column="8" lean-forward="false" selection-start-line="89" selection-start-column="8" selection-end-line="89" selection-end-column="8" />
               <folding>
-                <element signature="e#1399#1435#1#PHP" expanded="true" />
+                <element signature="e#49#139#0#PHP" expanded="true" />
+                <element signature="e#3643#3679#1#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="order_drop_shipping" pinned="false" current-in-tab="false">
-        <entry file="das://table:/d5b463a6/16b5b016-419b-4c8d-99e4-cbe4837c4d5e/main.order_drop_shipping">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GetAllOrdersPaidDataTransformJSON.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Application/GetAllOrdersPaid/GetAllOrdersPaidDataTransformJSON.php">
+      <file leaf-file-name="GetAnOrderWithOrderIdCommand.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Application/GetAnOrderWithOrderId/GetAnOrderWithOrderIdCommand.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="24" column="5" lean-forward="false" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+            <state relative-caret-position="432">
+              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -193,11 +205,24 @@
         <option value="$PROJECT_DIR$/src/Application/ResetAnOrderWithArticle/ResetAnOrderWithArticleResetAnOrderWithArticleDataTransformJSON.php" />
         <option value="$PROJECT_DIR$/src/Application/GetAllOrdersPaid/GetAllOrdersPaid.php" />
         <option value="$PROJECT_DIR$/src/Application/GetAllOrdersPaid/GetAllOrdersPaidDataTransformJSON.php" />
-        <option value="$PROJECT_DIR$/config/routes.yaml" />
         <option value="$PROJECT_DIR$/src/Application/ResetAnOrderWithArticle/ResetAnOrderWithArticleDataTransformEmpty.php" />
-        <option value="$PROJECT_DIR$/src/Infrastructure/Controller/DropShippingController.php" />
+        <option value="$PROJECT_DIR$/src/Domain/Entity/DropShipping/OrderNotFoundException.php" />
         <option value="$PROJECT_DIR$/src/Application/ResetAnOrderWithArticle/ResetAnOrderWithArticle.php" />
+        <option value="$PROJECT_DIR$/src/Application/GetAnOrderWithOrderId/GetAnOrderWithOrderIdDataTransform.php" />
+        <option value="$PROJECT_DIR$/src/Application/GetAnOrderWithOrderId/GetAnOrderWithOrderIdCommand.php" />
+        <option value="$PROJECT_DIR$/src/Application/GetAnOrderWithOrderId/GetAnOrderWithOrderId.php" />
+        <option value="$PROJECT_DIR$/src/Application/GetAnOrderWithOrderId/GetAnOrderWithOrderIdDataTransformJSON.php" />
+        <option value="$PROJECT_DIR$/src/Application/ChangeProviderFromOrderWithArticle/ChangeProviderFromOrderWithArticleDataTransform.php" />
+        <option value="$PROJECT_DIR$/src/Application/ChangeProviderFromOrderWithArticle/ChangeProviderFromOrderWithArticleDataTransformEmpty.php" />
+        <option value="$PROJECT_DIR$/src/Application/ChangeProviderFromOrderWithArticle/ChangeProviderFromOrderWithArticle.php" />
+        <option value="$PROJECT_DIR$/src/Application/ChangeProviderFromOrderWithArticle/ChangeProviderFromOrderWithArticleCommand.php" />
         <option value="$PROJECT_DIR$/src/Infrastructure/Entity/DropShipping/Repository/OrderDropShippingDoctrineRepository.php" />
+        <option value="$PROJECT_DIR$/src/Application/OrdersPerPage/OrdersPerPageDataTransform.php" />
+        <option value="$PROJECT_DIR$/src/Application/OrdersPerPage/OrdersPerPage.php" />
+        <option value="$PROJECT_DIR$/config/routes.yaml" />
+        <option value="$PROJECT_DIR$/src/Application/OrdersPerPage/OrdersPerPageDataTransFormJSON.php" />
+        <option value="$PROJECT_DIR$/src/Application/OrdersPerPage/OrdersPerPageCommand.php" />
+        <option value="$PROJECT_DIR$/src/Infrastructure/Controller/DropShippingController.php" />
       </list>
     </option>
   </component>
@@ -228,8 +253,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -258,21 +283,14 @@
               <item name="Examen" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="GetAllOrdersPaid" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ChangeProviderFromOrderWithArticle" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Examen" type="b2602c69:ProjectViewProjectNode" />
               <item name="Examen" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="ResetAnOrderWithArticle" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Examen" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Examen" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Services" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="OrdersPerPage" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Examen" type="b2602c69:ProjectViewProjectNode" />
@@ -332,6 +350,32 @@
               <item name="DropShipping" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Repository" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="Examen" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Examen" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="tests" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Examen" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Examen" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="tests" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Domain" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Examen" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Examen" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="tests" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Domain" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Examen" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Examen" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="tests" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Domain" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="DropShipping" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -371,15 +415,15 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHPUnit.ProviderTest.test_if_can_create_provider">
+  <component name="RunManager" selected="PHPUnit.ProviderTest">
     <configuration name="OrderDropShippingTest.given_hand_with_not_ace_when_execute_then_return_false" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="App\Test\Domain\Entity\DropShipping\OrderDropShippingTest" file="$PROJECT_DIR$/tests/Domain/Entity/DropShipping/OrderDropShippingTest.php" method="given_hand_with_not_ace_when_execute_then_return_false" scope="Method" />
     </configuration>
-    <configuration name="OrderDropShippingTest.given_operatos_when_execute_add_operation_then_return_succesful_result" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="App\Test\Domain\Entity\DropShipping\OrderDropShippingTest" file="$PROJECT_DIR$/tests/Domain/Entity/DropShipping/OrderDropShippingTest.php" method="given_operatos_when_execute_add_operation_then_return_succesful_result" scope="Method" />
-    </configuration>
     <configuration name="OrderDropShippingTest.test_if_can_create_OrderDropShipping" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="App\Test\Domain\Entity\DropShipping\OrderDropShippingTest" file="$PROJECT_DIR$/tests/Domain/Entity/DropShipping/OrderDropShippingTest.php" method="test_if_can_create_OrderDropShipping" scope="Method" />
+    </configuration>
+    <configuration name="ProviderTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="App\Test\Domain\Entity\DropShipping\ProviderTest" file="$PROJECT_DIR$/tests/Domain/Entity/DropShipping/ProviderTest.php" scope="Class" />
     </configuration>
     <configuration name="ProviderTest.test_if_can_create_OrderDropShipping" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="App\Test\Domain\Entity\DropShipping\ProviderTest" file="$PROJECT_DIR$/tests/Domain/Entity/DropShipping/ProviderTest.php" method="test_if_can_create_OrderDropShipping" scope="Method" />
@@ -388,19 +432,19 @@
       <TestRunner class="App\Test\Domain\Entity\DropShipping\ProviderTest" file="$PROJECT_DIR$/tests/Domain/Entity/DropShipping/ProviderTest.php" method="test_if_can_create_provider" scope="Method" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="PHPUnit.OrderDropShippingTest.given_operatos_when_execute_add_operation_then_return_succesful_result" />
-      <item index="1" class="java.lang.String" itemvalue="PHPUnit.OrderDropShippingTest.given_hand_with_not_ace_when_execute_then_return_false" />
-      <item index="2" class="java.lang.String" itemvalue="PHPUnit.OrderDropShippingTest.test_if_can_create_OrderDropShipping" />
-      <item index="3" class="java.lang.String" itemvalue="PHPUnit.ProviderTest.test_if_can_create_OrderDropShipping" />
-      <item index="4" class="java.lang.String" itemvalue="PHPUnit.ProviderTest.test_if_can_create_provider" />
+      <item index="0" class="java.lang.String" itemvalue="PHPUnit.OrderDropShippingTest.given_hand_with_not_ace_when_execute_then_return_false" />
+      <item index="1" class="java.lang.String" itemvalue="PHPUnit.OrderDropShippingTest.test_if_can_create_OrderDropShipping" />
+      <item index="2" class="java.lang.String" itemvalue="PHPUnit.ProviderTest.test_if_can_create_OrderDropShipping" />
+      <item index="3" class="java.lang.String" itemvalue="PHPUnit.ProviderTest.test_if_can_create_provider" />
+      <item index="4" class="java.lang.String" itemvalue="PHPUnit.ProviderTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="PHPUnit.ProviderTest.test_if_can_create_provider" />
-        <item index="1" class="java.lang.String" itemvalue="PHPUnit.ProviderTest.test_if_can_create_OrderDropShipping" />
-        <item index="2" class="java.lang.String" itemvalue="PHPUnit.OrderDropShippingTest.test_if_can_create_OrderDropShipping" />
-        <item index="3" class="java.lang.String" itemvalue="PHPUnit.OrderDropShippingTest.given_hand_with_not_ace_when_execute_then_return_false" />
-        <item index="4" class="java.lang.String" itemvalue="PHPUnit.OrderDropShippingTest.given_operatos_when_execute_add_operation_then_return_succesful_result" />
+        <item index="0" class="java.lang.String" itemvalue="PHPUnit.ProviderTest" />
+        <item index="1" class="java.lang.String" itemvalue="PHPUnit.ProviderTest.test_if_can_create_provider" />
+        <item index="2" class="java.lang.String" itemvalue="PHPUnit.ProviderTest.test_if_can_create_OrderDropShipping" />
+        <item index="3" class="java.lang.String" itemvalue="PHPUnit.OrderDropShippingTest.test_if_can_create_OrderDropShipping" />
+        <item index="4" class="java.lang.String" itemvalue="PHPUnit.OrderDropShippingTest.given_hand_with_not_ace_when_execute_then_return_false" />
       </list>
     </recent_temporary>
   </component>
@@ -419,14 +463,12 @@
       <updated>1524122275641</updated>
       <workItem from="1524122279500" duration="2777000" />
       <workItem from="1524125699777" duration="16273000" />
-      <workItem from="1524204262167" duration="18321000" />
+      <workItem from="1524204262167" duration="18517000" />
+      <workItem from="1524464654959" duration="14957000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="OrderDropShippingTest_given_hand_with_not_ace_when_execute_then_return_false - 2018.04.19 at 11h 54m 38s.xml">
-      <configuration name="OrderDropShippingTest.given_hand_with_not_ace_when_execute_then_return_false" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
     <history-entry file="OrderDropShippingTest_given_hand_with_not_ace_when_execute_then_return_false - 2018.04.19 at 11h 57m 49s.xml">
       <configuration name="OrderDropShippingTest.given_hand_with_not_ace_when_execute_then_return_false" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
@@ -448,6 +490,9 @@
     <history-entry file="OrderDropShippingTest_test_if_can_create_OrderDropShipping - 2018.04.19 at 12h 27m 04s.xml">
       <configuration name="OrderDropShippingTest.test_if_can_create_OrderDropShipping" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
+    <history-entry file="ProviderTest - 2018.04.23 at 11h 30m 44s.xml">
+      <configuration name="ProviderTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
     <history-entry file="ProviderTest_test_if_can_create_OrderDropShipping - 2018.04.19 at 14h 45m 18s.xml">
       <configuration name="ProviderTest.test_if_can_create_OrderDropShipping" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
@@ -456,20 +501,22 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37371000" />
+    <option name="totallyTimeSpent" value="52524000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1050" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2497332" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2524013" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977587" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32977587" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33695653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33695653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -512,113 +559,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Infrastructure/Entity/DropShipping/Repository/ProviderDoctrineRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="11" lean-forward="true" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Infrastructure/Controller/DropShippingController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="14" column="12" lean-forward="false" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
-          <folding>
-            <element signature="e#49#120#0#PHP" expanded="false" />
-            <element signature="e#846#882#1#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Kernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="56" lean-forward="false" selection-start-line="17" selection-start-column="56" selection-end-line="17" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/packages/doctrine_migrations.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="55" lean-forward="false" selection-start-line="1" selection-start-column="55" selection-end-line="1" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/packages/routing.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/packages/framework.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/services.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="38" lean-forward="false" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/packages/doctrine.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="26" column="53" lean-forward="false" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Kernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Domain/Repository/.gitignore" />
     <entry file="file://$USER_HOME$/basket/kata-basket/tests/Ejemplo/IntSumTest.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -643,16 +583,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Domain/Entity/DropShipping/ProviderTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-          <folding>
-            <element signature="e#141#185#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/bundles.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -672,7 +602,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -680,7 +609,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -688,7 +616,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" column="39" lean-forward="false" selection-start-line="1" selection-start-column="39" selection-end-line="1" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -696,7 +623,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" column="39" lean-forward="false" selection-start-line="1" selection-start-column="39" selection-end-line="1" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -717,35 +643,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Application/Util/DataTransformerJSON.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Application/GetAllOrdersPaid/GetAllOrdersPaidCommand.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="28" column="27" lean-forward="false" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Application/Util/DataTransformerJSON.php" />
     <entry file="file://$PROJECT_DIR$/config/packages/framework.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -753,7 +655,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
           <caret line="27" column="43" lean-forward="false" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -785,7 +686,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="17" column="56" lean-forward="false" selection-start-line="17" selection-start-column="56" selection-end-line="17" selection-end-column="56" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -805,45 +705,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Application/GetAllOrdersPaid/GetAllOrdersPaid.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="13" column="6" lean-forward="false" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Application/GetAllOrdersPaid/GetAllOrdersPaidDataTransform.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="13" column="30" lean-forward="false" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Application/GetAllOrdersPaid/GetAllOrdersPaidDataTransformJSON.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="24" column="5" lean-forward="false" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="65" lean-forward="false" selection-start-line="10" selection-start-column="65" selection-end-line="10" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/d5b463a6/16b5b016-419b-4c8d-99e4-cbe4837c4d5e/main.order_drop_shipping">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/symfony/http-foundation/Response.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
@@ -852,28 +713,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Application/Services/ResetAnOrderWithParameters.php">
+    <entry file="file://$PROJECT_DIR$/src/Domain/Entity/DropShipping/OrderNotFoundException.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="20" column="55" lean-forward="false" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
+        <state relative-caret-position="252">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Infrastructure/Controller/DropShippingController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="36" column="5" lean-forward="false" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
-          <folding>
-            <element signature="e#1399#1435#1#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Application/ResetAnOrderWithArticle/ResetAnOrderWithArticleDataTransform.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
-          <caret line="13" column="18" lean-forward="false" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="39" />
           <folding />
         </state>
       </provider>
@@ -886,29 +737,207 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Application/ResetAnOrderWithArticle/ResetAnOrderWithArticle.php">
+    <entry file="file://$PROJECT_DIR$/src/Application/GetAnOrderWithOrderId/GetAnOrderWithOrderIdDataTransform.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="45" column="85" lean-forward="false" selection-start-line="45" selection-start-column="85" selection-end-line="45" selection-end-column="85" />
-          <folding>
-            <element signature="e#146#202#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="144">
+          <caret line="13" column="39" lean-forward="false" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Application/ResetAnOrderWithArticle/ResetAnOrderWithArticleDataTransformEmpty.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="15" column="22" lean-forward="false" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+        <state relative-caret-position="144">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="16" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Application/Services/ResetAnOrderWithParameters.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="20" column="34" lean-forward="false" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Application/ResetAnOrderWithArticle/ResetAnOrderWithArticle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="49" column="40" lean-forward="false" selection-start-line="49" selection-start-column="40" selection-end-line="49" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Domain/Entity/DropShipping/ProviderTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="24" column="1" lean-forward="false" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Application/ChangeProviderFromOrderWithArticle/ChangeProviderFromOrderWithArticleDataTransformEmpty.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="16" column="5" lean-forward="false" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Application/ChangeProviderFromOrderWithArticle/ChangeProviderFromOrderWithArticleDataTransform.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="13" column="39" lean-forward="false" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Application/ChangeProviderFromOrderWithArticle/ChangeProviderFromOrderWithArticle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="38" column="93" lean-forward="false" selection-start-line="38" selection-start-column="83" selection-end-line="38" selection-end-column="93" />
+          <folding>
+            <element signature="e#157#215#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="30" lean-forward="false" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/d5b463a6/16b5b016-419b-4c8d-99e4-cbe4837c4d5e/main.order_drop_shipping">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Application/GetAllOrdersPaid/GetAllOrdersPaidDataTransform.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Application/OrdersPerPage/OrdersPerPageDataTransform.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="13" column="39" lean-forward="false" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Application/GetAllOrdersPaid/GetAllOrdersPaidDataTransformJSON.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="13" column="37" lean-forward="false" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Application/GetAllOrdersPaid/GetAllOrdersPaidCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Application/GetAllOrdersPaid/GetAllOrdersPaid.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="28" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Infrastructure/Entity/DropShipping/Repository/OrderDropShippingDoctrineRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="34" column="9" lean-forward="true" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+        <state relative-caret-position="-662">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="19" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Application/OrdersPerPage/OrdersPerPage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="26" column="138" lean-forward="false" selection-start-line="26" selection-start-column="138" selection-end-line="26" selection-end-column="138" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Application/GetAnOrderWithOrderId/GetAnOrderWithOrderIdDataTransformJSON.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="13" column="44" lean-forward="false" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Application/GetAnOrderWithOrderId/GetAnOrderWithOrderId.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="31" column="123" lean-forward="false" selection-start-line="31" selection-start-column="84" selection-end-line="31" selection-end-column="123" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Application/OrdersPerPage/OrdersPerPageDataTransFormJSON.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="27" column="9" lean-forward="false" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Application/GetAnOrderWithOrderId/GetAnOrderWithOrderIdCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Application/ChangeProviderFromOrderWithArticle/ChangeProviderFromOrderWithArticleCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="31" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Application/OrdersPerPage/OrdersPerPageCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="26" column="34" lean-forward="true" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Infrastructure/Controller/DropShippingController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="89" column="8" lean-forward="false" selection-start-line="89" selection-start-column="8" selection-end-line="89" selection-end-column="8" />
+          <folding>
+            <element signature="e#49#139#0#PHP" expanded="true" />
+            <element signature="e#3643#3679#1#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
