@@ -12,7 +12,7 @@ namespace App\Aplication\HandleOperations\Dropshipping\GetPaidOrders;
 use App\Entity\NotFindDropshippingOrderException;
 use App\Infraestructure\Repository\DropshippingPedidos;
 
-class SelectByPayOutOrders
+class GetPaidOrders
 {
     private $repository;
     private $ordersTransform;
@@ -20,7 +20,7 @@ class SelectByPayOutOrders
      * SelectAllOrders constructor.
      * @param $repository
      */
-    public function __construct(DropshippingPedidos $repository, OrdersTransform $ordersTransform)
+    public function __construct(DropshippingPedidos $repository, GetPaidOrdersTransform $ordersTransform)
     {
         $this->repository = $repository;
         $this->ordersTransform = $ordersTransform;
@@ -32,9 +32,9 @@ class SelectByPayOutOrders
         $paidOrders = $this->repository->getPaidOrders();
 
         if(null == $paidOrders){
-            throw new NotFindDropshippingOrderException("Pedido no encontrado");
+            throw new NotFindDropshippingOrderException("No existen pedidos");
         }
 
-        return $this->ordersTransform->toArray($paidOrders);
+        return $this->ordersTransform->transform($paidOrders);
     }
 }

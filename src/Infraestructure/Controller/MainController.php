@@ -12,11 +12,12 @@ namespace App\Infraestructure\Controller;
 use App\Aplication\HandleOperations\Dropshipping\GetOrderByPedido\GetOrderByPedido;
 use App\Aplication\HandleOperations\Dropshipping\GetOrderByPedido\GetOrderCommand;
 use App\Aplication\HandleOperations\Dropshipping\GetOrderByPedido\GetOrderDataTransform;
-use App\Aplication\HandleOperations\Dropshipping\GetPaidOrders\OrdersTransform;
+use App\Aplication\HandleOperations\Dropshipping\GetPaidOrders\GetPaidOrdersTransform;
 use App\Aplication\HandleOperations\Dropshipping\GetPaidOrders\SelectAllOrders;
-use App\Aplication\HandleOperations\Dropshipping\GetPaidOrders\SelectByPayOutOrders;
+use App\Aplication\HandleOperations\Dropshipping\GetPaidOrders\GetPaidOrders;
 use App\Aplication\HandleOperations\Dropshipping\ResetOrders\ResetOrderByIdPedidoAndIdArticle;
 use App\Aplication\HandleOperations\Dropshipping\ResetOrders\ResetOrderCommand;
+use App\Entity\AlreadyResetOrder;
 use App\Entity\DropshippingPedidos;
 use App\Entity\NotFindDropshippingOrderException;
 use App\Infraestructure\Render\RenderInJSON\RenderInJSON;
@@ -33,7 +34,7 @@ class MainController extends Controller
     {
         $orders = (new SelectAllOrders(
             $entityManager->getRepository('App:DropshippingPedidos'),
-            new OrdersTransform())
+            new GetPaidOrdersTransform())
         )->execute();
 
         dump($orders);
@@ -43,37 +44,41 @@ class MainController extends Controller
 
     public function getDropshippingOrders(EntityManagerInterface $entityManager)
     {
-        try {
-            $orders = (new SelectByPayOutOrders(
-                $entityManager->getRepository('App:DropshippingPedidos'),
-                new OrdersTransform())
-            )->execute();
-        } catch (NotFindDropshippingOrderException $dropshippingOrderException) {
 
-            return new Response($dropshippingOrderException->getMessage());
+        try {
+            $orders = (new GetPaidOrders(
+                $entityManager->getRepository('App:DropshippingPedidos'),
+                new GetPaidOrdersTransform())
+            )->execute();
+        } catch (NotFindDropshippingOrderException $e) {
         }
+
         return JsonResponse::fromJsonString((new RenderInJSON($orders))->render());
 
     }
 
     public function resetOrderByIdPedidoAndIdArticulo($idPedido, $idAritculo)
     {
+        $response = 'OK';
+
         try {
             (new ResetOrderByIdPedidoAndIdArticle(
                 $this->getDoctrine()->getManager()->getRepository('App:DropshippingPedidos')
-            ))->execute(new ResetOrderCommand($idPedido, $idAritculo));
+            ))->handle(new ResetOrderCommand($idPedido, $idAritculo));
 
-        } catch (NotFindDropshippingOrderException $dropshippingOrderException) {
-
-            return new Response($dropshippingOrderException->getMessage());
+        } catch (NotFindDropshippingOrderException $e) {
+            $response = $e->getMessage();
+        } catch (AlreadyResetOrder$e) {
+            $response = $e->getMessage();
         }
-        return new Response('OK');
+
+        return new Response($response);
     }
 
     public function getOrderByIdPedido($idPedido)
     {
         try {
-           $order = (new GetOrderByPedido(
+            $order = (new GetOrderByPedido(
                 $this
                     ->getDoctrine()
                     ->getManager()
@@ -86,6 +91,7 @@ class MainController extends Controller
 
         return JsonResponse::fromJsonString((new RenderInJSON($order))->render());
     }
+
     public function insertTestData(EntityManagerInterface $entityManager)
     {
         $product = new DropshippingPedidos(

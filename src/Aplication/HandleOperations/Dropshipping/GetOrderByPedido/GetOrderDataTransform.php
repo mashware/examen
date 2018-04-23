@@ -12,9 +12,9 @@ namespace App\Aplication\HandleOperations\Dropshipping\GetOrderByPedido;
 use App\Aplication\HandleOperations\Dropshipping\DataTransform;
 use App\Entity\DropshippingPedidos;
 
-class GetOrderDataTransform
+class GetOrderDataTransform implements GetOrderByPedidoDataTransform
 {
-    public function transform(DropshippingPedidos $order)
+    public function transform(DropshippingPedidos $order): array
     {
         return $response= [
             'id'=>$order->getId(),

@@ -19,9 +19,9 @@ class GetOrderCommand
      * GetOrderCommand constructor.
      * @param $idPedido
      */
-    public function __construct(int $idPedido)
+    public function __construct($idPedido)
     {
-        Assertion::integer($idPedido, 'Must be integer');
+        Assertion::numeric($idPedido, 'Must be integer');
         $this->idPedido = $idPedido;
     }
 

@@ -1,5 +1,7 @@
 <?php
+
 namespace App\Repository;
+
 use App\Entity\DropshippingPedidos;
 use App\Infraestructure\Repository\DropshippingPedidos as IDropshippingPedidos;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
@@ -17,6 +19,7 @@ class DropshippingPedidosRepository extends ServiceEntityRepository implements I
     {
         parent::__construct($registry, DropshippingPedidos::class);
     }
+
     public function persistAndFlush(DropshippingPedidos $dropshippingPedidos)
     {
         $this->getEntityManager()->persist($dropshippingPedidos);
@@ -26,23 +29,23 @@ class DropshippingPedidosRepository extends ServiceEntityRepository implements I
 
     public function selectAllOrders()
     {
-            return $this->getEntityManager()->getRepository('App:DropshippingPedidos')->findAll();
+        return $this->getEntityManager()->getRepository('App:DropshippingPedidos')->findAll();
     }
 
 
     public function getPaidOrders()
     {
-        return $this->getEntityManager()->getRepository('App:DropshippingPedidos')->findBy(['estado'=>'PAGADO']);
+        return $this->getEntityManager()->getRepository('App:DropshippingPedidos')->findBy(['estado' => 'PAGADO']);
     }
 
     public function findByIdPedidoAndIdArticulo(int $idPedido, int $idArticle)
     {
-        return $this->getEntityManager()->getRepository('App:DropshippingPedidos')->findOneBy(['pedido'=>$idPedido,'id_articulo'=>$idArticle]);
+        return $this->getEntityManager()->getRepository('App:DropshippingPedidos')->findOneBy(['pedido' => $idPedido, 'id_articulo' => $idArticle]);
     }
 
 
     public function getOrderByPedido(int $idPedido)
     {
-        return $this->getEntityManager()->getRepository('App:DropshippingPedidos')->findOneBy(['pedido'=>$idPedido]);
+        return $this->getEntityManager()->getRepository('App:DropshippingPedidos')->findOneBy(['pedido' => $idPedido]);
     }
 }

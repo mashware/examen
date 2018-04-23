@@ -9,6 +9,7 @@
 namespace App\Aplication\HandleOperations\Dropshipping\ResetOrders;
 
 
+use App\Entity\AlreadyResetOrder;
 use App\Entity\DropshippingPedidos;
 use App\Entity\NotFindDropshippingOrderException;
 use App\Infraestructure\Repository\DropshippingPedidos as IDropshippingPedidos;
@@ -16,6 +17,7 @@ use App\Infraestructure\Repository\DropshippingPedidos as IDropshippingPedidos;
 class ResetOrderByIdPedidoAndIdArticle
 {
     private $repository;
+    private const NUEVO = 'NUEVO';
 
     /**
      * ResetOrderByIdPedidoAndIdArticle constructor.
@@ -37,8 +39,11 @@ class ResetOrderByIdPedidoAndIdArticle
         if(null === $order){
             throw new NotFindDropshippingOrderException('KO');
         }
-
-        $order->setEstado('NUEVO');
+        if (self::NUEVO===$order->getEstado())
+        {
+            throw new AlreadyResetOrder('KO');
+        }
+        $order->setEstado(self::NUEVO);
         $order->setPedidoProveedor(0);
         $order->setAlmacen(0);
         $order->setIdProveedor(0);

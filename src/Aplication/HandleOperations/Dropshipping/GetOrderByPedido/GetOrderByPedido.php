@@ -36,6 +36,4 @@ class GetOrderByPedido
 
         return $this->dataTransform->transform($order);
     }
-
-
 }

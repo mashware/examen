@@ -11,8 +11,6 @@ namespace App\Aplication\HandleOperations\Dropshipping\GetPaidOrders;
 use App\Infraestructure\Repository\DropshippingPedidos;
 
 
-
-
 class SelectAllOrders
 {
     private $repository;
@@ -21,7 +19,7 @@ class SelectAllOrders
      * SelectAllOrders constructor.
      * @param $repository
      */
-    public function __construct(DropshippingPedidos $repository, OrdersTransform $ordersTransform)
+    public function __construct(DropshippingPedidos $repository, GetPaidOrdersTransform $ordersTransform)
     {
         $this->repository = $repository;
         $this->ordersTransform = $ordersTransform;
@@ -30,6 +28,6 @@ class SelectAllOrders
 
     public function execute()
     {
-        return $this->ordersTransform->toArray($this->repository->selectAllOrders());
+        return $this->ordersTransform->transform($this->repository->selectAllOrders());
     }
 }

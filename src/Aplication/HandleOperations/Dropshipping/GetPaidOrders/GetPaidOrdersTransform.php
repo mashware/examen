@@ -11,12 +11,12 @@ namespace App\Aplication\HandleOperations\Dropshipping\GetPaidOrders;
 
 use App\Entity\DropshippingPedidos;
 
-class OrdersTransform
+class GetPaidOrdersTransform implements GetPaidOrdersDataTransform
 {
     /**
      * @var $order DropshippingPedidos
      */
-    public function toArray(array $orders): array
+    public function transform(array $orders): array
     {
         $response=[];
 
