@@ -11,13 +11,13 @@ namespace App\Domain\Model\Entity;
 
 class DropShippingOrderStatus
 {
-    const STATUS_PAID = 'PAGADO';
-    const STATUS_NEW = 'NUEVO';
-    const RED ='ROJO';
-    const BUYED = 'COMPRADO';
-    const GREEN = 'VERDE';
-    const ALBARANADO = 'ALBARANADO';
-    const SYNC = 'SINCRONIZADO';
-    const FINISHED = 'FINALIZADO';
-    const ERROR ='ERROR';
+    const STATUS_PAID = 'paid';
+    const STATUS_NEW = 'nuevo';
+    const STATUS_RED ='rojo';
+    const STATUS_BUYED = 'comprado';
+    const STATUS_GREEN = 'verde';
+    const STATUS_ALBARANADO = 'albaranado';
+    const STATUS_SYNC = 'sincronizado';
+    const STATUS_FINISHED = 'finalizado';
+    const STATUS_ERROR ='error';
 }

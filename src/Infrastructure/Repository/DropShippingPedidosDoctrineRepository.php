@@ -2,6 +2,7 @@
 
 namespace App\Infrastructure\Repository;
 
+use App\Domain\Model\Entity\DropShippingOrderStatus;
 use App\Domain\Model\Entity\DropShippingPedidos;
 use App\Domain\Model\Entity\Interfaces\DropShippingPedidosRepositoryInterface;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
@@ -62,7 +63,7 @@ class DropShippingPedidosDoctrineRepository extends ServiceEntityRepository impl
     {
         $query = $this->createQueryBuilder('dso')
             ->andWhere('dso.estado = :status')
-            ->setParameter('status', "paid")
+            ->setParameter('status', DropShippingOrderStatus::STATUS_PAID)
             ->getQuery()
             ->setFirstResult(10 * ($page - 1)) // set the offset
             ->setMaxResults(10);;

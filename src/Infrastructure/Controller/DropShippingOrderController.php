@@ -23,6 +23,7 @@ use App\Application\DropShipping\NewProviderGivenNewProviderOrderNumberAndArticl
 use App\Application\DropShipping\resetOrderGivenNumberAndArticle\ResetOrderGivenNumberAndArticle;
 use App\Application\DropShipping\resetOrderGivenNumberAndArticle\ResetOrderGivenNumberAndArticleCommand;
 use App\Application\DropShipping\Util\DataTransform\DataTransformToArrayForAllList;
+use App\Domain\Service\CheckIfOrdersExist;
 use App\Infrastructure\Repository\DropShippingPedidosDoctrineRepository;
 use Doctrine\ORM\EntityManager;
 use Symfony\Bridge\Doctrine\RegistryInterface;
@@ -38,7 +39,8 @@ class DropShippingOrderController extends Controller
 
         $listAllDropShippingApplication = new ListAllDropShippingApplication(
             new DataTransformToArrayForAllList(),
-            $this->sendRepository()
+            $this->sendRepository(),
+            new CheckIfOrdersExist()
 
         );
 
@@ -49,11 +51,12 @@ class DropShippingOrderController extends Controller
         return $this->json($dataToShow);
     }
 
-    public function listAllPaidStatusByPage(int $page = 1)
+    public function listAllPaidStatusByPage(int $page)
     {
         $listAllPaidDropShippingApplication = new ListAllPaidDropShippingApplication(
             new DataTransformToArrayForAllList(),
-            $this->sendRepository()
+            $this->sendRepository(),
+            new CheckIfOrdersExist()
 
         );
 
@@ -69,7 +72,8 @@ class DropShippingOrderController extends Controller
 
         $listOneDropShippingApplicationOrder = new ListOneDropShippingApplicationOrder(
             new DataTransformToArrayForAllList(),
-            $this->sendRepository()
+            $this->sendRepository(),
+            new CheckIfOrdersExist()
 
         );
 
@@ -85,7 +89,8 @@ class DropShippingOrderController extends Controller
     {
         $listByOrderNumberAndArticle = new ListByOrderNumberAndArticle(
             new DataTransformToArrayForAllList(),
-            $this->sendRepository()
+            $this->sendRepository(),
+            new CheckIfOrdersExist()
         );
 
 
@@ -99,7 +104,9 @@ class DropShippingOrderController extends Controller
     public function resetByOrderNumberAndArticle(int $orderNumber, int $article)
     {
         $listByOrderNumberAndArticle = new ResetOrderGivenNumberAndArticle(
-            $this->sendRepository()
+            new DataTransformToArrayForAllList(),
+            $this->sendRepository(),
+            new CheckIfOrdersExist()
         );
 
         $dataToShow = $listByOrderNumberAndArticle
@@ -112,7 +119,9 @@ class DropShippingOrderController extends Controller
     {
          $provider = $request->request->get('provider');
         $listByOrderNumberAndArticle = new NewProviderGivenNewProviderOrderNumberAndArticle(
-            $this->sendRepository()
+            new DataTransformToArrayForAllList(),
+            $this->sendRepository(),
+            new CheckIfOrdersExist()
         );
 
         $dataToShow = $listByOrderNumberAndArticle

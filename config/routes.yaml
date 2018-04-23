@@ -5,10 +5,14 @@ ListAllOrder:
 ListAllPaidOrderredirect:
     path: /order/dropshippingpaid
     controller: App\Infrastructure\Controller\DropShippingOrderController::listAllPaidStatusByPage
+    defaults:
+        page: 1
 
 ListAllPaidOrder:
     path: /order/dropshippingpaid/{page}/pg
     controller: App\Infrastructure\Controller\DropShippingOrderController::listAllPaidStatusByPage
+    defaults:
+        page: 1
 
 listOneByOrderNumber:
     path: /order/dropshipping/{orderNumber}

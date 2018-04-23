@@ -9,19 +9,26 @@
 namespace App\Application\DropShipping\NewProviderGivenNewProviderOrderNumberAndArticle;
 
 
+use App\Application\DropShipping\Util\DataTransform\DataTransformToArrayForAllList;
 use App\Domain\Model\Entity\DropShippingPedidos;
 use App\Domain\Model\Entity\Interfaces\DropShippingPedidosRepositoryInterface;
+use App\Domain\Service\CheckIfOrdersExist;
 
 class NewProviderGivenNewProviderOrderNumberAndArticle
 {
 
-
+    private $dataTransformToArrayForAllList;
     private $dropShippingRepository;
+    private $checkIfOrdersExist;
 
     public function __construct(
-        DropShippingPedidosRepositoryInterface $dropShippingDoctrineRepository
+        DataTransformToArrayForAllList $dataTransformToArrayForAllList,
+        DropShippingPedidosRepositoryInterface $dropShippingDoctrineRepository,
+        CheckIfOrdersExist $checkIfOrdersExist
     ) {
+        $this->dataTransformToArrayForAllList = $dataTransformToArrayForAllList;
         $this->dropShippingRepository = $dropShippingDoctrineRepository;
+        $this->checkIfOrdersExist = $checkIfOrdersExist;
     }
 
     /**
@@ -37,6 +44,8 @@ class NewProviderGivenNewProviderOrderNumberAndArticle
                 $newProviderGivenOrderNumbeAndArticleCommand->getArticle()
             );
 
+        $dropShippingOrders = $this->checkIfOrdersExist->execute($dropShippingOrders);
+
         foreach ($dropShippingOrders as $order) {
             $order->setIdProveedor(
                 $newProviderGivenOrderNumbeAndArticleCommand->getProvider()
@@ -45,7 +54,7 @@ class NewProviderGivenNewProviderOrderNumberAndArticle
             $this->dropShippingRepository->persistAndFlush($order);
         }
 
-
+        $dropShippingOrders = $this->dataTransformToArrayForAllList->execute($dropShippingOrders);
 
         return  $dropShippingOrders;
     }

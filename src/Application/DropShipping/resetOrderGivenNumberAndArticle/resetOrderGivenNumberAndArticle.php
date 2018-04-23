@@ -9,18 +9,26 @@
 namespace App\Application\DropShipping\resetOrderGivenNumberAndArticle;
 
 
+use App\Application\DropShipping\Util\DataTransform\DataTransformToArrayForAllList;
+use App\Domain\Model\Entity\DropShippingOrderStatus;
 use App\Domain\Model\Entity\DropShippingPedidos;
 use App\Domain\Model\Entity\Interfaces\DropShippingPedidosRepositoryInterface;
+use App\Domain\Service\CheckIfOrdersExist;
 
 class ResetOrderGivenNumberAndArticle
 {
-
+    private $dataTransformToArrayForAllList;
     private $dropShippingRepository;
+    private $checkIfOrdersExist;
 
     public function __construct(
-        DropShippingPedidosRepositoryInterface $dropShippingDoctrineRepository
+        DataTransformToArrayForAllList $dataTransformToArrayForAllList,
+        DropShippingPedidosRepositoryInterface $dropShippingDoctrineRepository,
+        CheckIfOrdersExist $checkIfOrdersExist
     ) {
+        $this->dataTransformToArrayForAllList = $dataTransformToArrayForAllList;
         $this->dropShippingRepository = $dropShippingDoctrineRepository;
+        $this->checkIfOrdersExist = $checkIfOrdersExist;
     }
 
     /**
@@ -35,8 +43,10 @@ class ResetOrderGivenNumberAndArticle
                 $resetOrderGivenNumberAndArticleCommand->getArticle()
             );
 
+        $dropShippingOrders =$this->checkIfOrdersExist->execute($dropShippingOrders);
+
         foreach ($dropShippingOrders as $order) {
-            $order->setEstado("nuevo");
+            $order->setEstado(DropShippingOrderStatus::STATUS_NEW);
             $order->setPedidoProveedor(0);
             $order->setAlmacen(0);
             $order->setIdProveedor(0);
@@ -44,7 +54,7 @@ class ResetOrderGivenNumberAndArticle
             $this->dropShippingRepository->persistAndFlush($order);
         }
 
-
+        $dropShippingOrders = $this->dataTransformToArrayForAllList->execute($dropShippingOrders);
 
         return  $dropShippingOrders;
     }
