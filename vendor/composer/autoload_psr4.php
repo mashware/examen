@@ -6,10 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'phpDocumentor\\Reflection\\' => array($vendorDir . '/phpdocumentor/reflection-common/src', $vendorDir . '/phpdocumentor/reflection-docblock/src', $vendorDir . '/phpdocumentor/type-resolver/src'),
     'Zend\\EventManager\\' => array($vendorDir . '/zendframework/zend-eventmanager/src'),
     'Zend\\Code\\' => array($vendorDir . '/zendframework/zend-code/src'),
-    'Webmozart\\Assert\\' => array($vendorDir . '/webmozart/assert/src'),
     'Twig\\' => array($vendorDir . '/twig/twig/src'),
     'Symfony\\Polyfill\\Php72\\' => array($vendorDir . '/symfony/polyfill-php72'),
     'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
@@ -36,6 +34,7 @@ return array(
     'Symfony\\Bundle\\MakerBundle\\' => array($vendorDir . '/symfony/maker-bundle/src'),
     'Symfony\\Bundle\\FrameworkBundle\\' => array($vendorDir . '/symfony/framework-bundle'),
     'Symfony\\Bridge\\Twig\\' => array($vendorDir . '/symfony/twig-bridge'),
+    'Symfony\\Bridge\\PhpUnit\\' => array($vendorDir . '/symfony/phpunit-bridge'),
     'Symfony\\Bridge\\Doctrine\\' => array($vendorDir . '/symfony/doctrine-bridge'),
     'Sensio\\Bundle\\FrameworkExtraBundle\\' => array($vendorDir . '/sensio/framework-extra-bundle'),
     'Psr\\SimpleCache\\' => array($vendorDir . '/psr/simple-cache/src'),
@@ -55,7 +54,6 @@ return array(
     'Doctrine\\Bundle\\MigrationsBundle\\' => array($vendorDir . '/doctrine/doctrine-migrations-bundle'),
     'Doctrine\\Bundle\\DoctrineCacheBundle\\' => array($vendorDir . '/doctrine/doctrine-cache-bundle'),
     'Doctrine\\Bundle\\DoctrineBundle\\' => array($vendorDir . '/doctrine/doctrine-bundle'),
-    'DeepCopy\\' => array($vendorDir . '/myclabs/deep-copy/src/DeepCopy'),
     'Assert\\' => array($vendorDir . '/beberlei/assert/lib/Assert'),
     'Application\\' => array($baseDir . '/Application'),
     'App\\Tests\\' => array($baseDir . '/tests'),

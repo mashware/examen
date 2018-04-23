@@ -14,6 +14,8 @@ class DataTransformerReturnPaidOrders implements DataTransformerReturnPaidOrders
 {
     public function execute(array $dataInput): array
     {
+        echo "\ninput\n";
+        var_dump($dataInput);
         $dataOutput = [];
         foreach ($dataInput as $order) {
             $dataOutput[] = [
@@ -26,6 +28,8 @@ class DataTransformerReturnPaidOrders implements DataTransformerReturnPaidOrders
             ];
         }
 
+        echo "\noutput\n";
+        var_dump($dataOutput);
         return $dataOutput;
     }
 }

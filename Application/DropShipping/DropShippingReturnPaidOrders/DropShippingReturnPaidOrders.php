@@ -8,6 +8,7 @@
 
 namespace Application\DropShipping\DropShippingReturnPaidOrders;
 
+use App\Domain\Entity\EmptyQueryOutputException;
 use Application\DropShipping\DropShippingReturnPaidOrders\Interfaces\DataTransformerReturnPaidOrdersInterface;
 use Infrastructure\Repository\OrderEntityRepository;
 
@@ -40,6 +41,10 @@ class DropShippingReturnPaidOrders
                 $this->orderEntityRepository
                 ->returnPaidOrders()
             );
+
+        if (empty($queryOutput)) {
+            throw new EmptyQueryOutputException();
+        }
 
         return $queryOutput;
     }

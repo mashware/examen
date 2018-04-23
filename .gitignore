@@ -39,3 +39,8 @@
 
 # Backup entities generated with doctrine:generate:entities command
 **/Entity/*~
+
+###> symfony/phpunit-bridge ###
+.phpunit
+/phpunit.xml
+###< symfony/phpunit-bridge ###
