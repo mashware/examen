@@ -115,7 +115,7 @@ class DropShippingOrder extends Controller
 
         $id = $request->get('id');
         $article = $request->get('article');
-        $id_provider = $request->get('provider');
+        $id_provider = $request->request->get('provider');
         $changeProviderByIdAndArticleCommand = new ChangeProviderByIdAndArticleCommand($id, $article, $id_provider);
 
         return $this->json(

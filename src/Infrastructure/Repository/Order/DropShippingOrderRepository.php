@@ -9,11 +9,25 @@ use Javier\Exam\Domain\Model\Entity\Order\DropShippingOrder;
 
 class DropShippingOrderRepository extends EntityRepository implements DropShippingOrderRepositoryInterface
 {
+    private const MAX_RESULTS_PAGINATE = 10;
+
     public function showOrdersWithStatusPaidOut(): array
     {
         $query = $this->createQueryBuilder('dso')
             ->andWhere('dso.estado = :status')
             ->setParameter('status', StatusDropShippingOrder::STATUS_PAID_OUT)
+            ->getQuery();
+
+        return $query->execute();
+    }
+
+    public function showOrdersWithStatusPaidOutPaginate(int $page): array
+    {
+        $query = $this->createQueryBuilder('dso')
+            ->andWhere('dso.estado = :status')
+            ->setParameter('status', StatusDropShippingOrder::STATUS_PAID_OUT)
+            ->setFirstResult(self::MAX_RESULTS_PAGINATE * ($page - 1))
+            ->setMaxResults(self::MAX_RESULTS_PAGINATE)
             ->getQuery();
 
         return $query->execute();

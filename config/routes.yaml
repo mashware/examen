@@ -14,7 +14,7 @@ reset_orders_get_by_id_article:
     methods: [GET]
 
 change_provider_orders_get_by_id_article:
-    path: /order/dropshipping/{id}/article/{article}/provider/{provider}
+    path: /order/dropshipping/{id}/article/{article}
     controller: Javier\Exam\Infrastructure\Controller\Order\DropShippingOrder::changeProviderOrdersByIdAndArticle
     methods: [PUT]
 
