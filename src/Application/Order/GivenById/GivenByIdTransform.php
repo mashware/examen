@@ -10,7 +10,7 @@ class GivenByIdTransform implements GivenByIdTransformInterface
      * @param array|DropShippingOrder[] $orders
      * @return array
      */
-    public function transform(array $orders)
+    public function transform(array $orders): array
     {
         $ordersTransform = [];
         foreach ($orders as $order) {
@@ -18,7 +18,12 @@ class GivenByIdTransform implements GivenByIdTransformInterface
                 'id' => $order->getId(),
                 'pedido' => $order->getPedido(),
                 'id_proveedor' => $order->getIdProveedor(),
+                'fecha_sincronizado' => $order->getFechaSincronizado(),
                 'estado' => $order->getEstado(),
+                'fecha_envio_prevista_min' => $order->getFechaEnvioPrevistaMin(),
+                'fecha_envio_prevista' => $order->getFechaEnvioPrevista(),
+                'fecha_entrega_prevista_min' => $order->getFechaEntregaPrevistaMin(),
+                'fecha_entrega_prevista' => $order->getFechaEntregaPrevista(),
                 'id_articulo' => $order->getIdArticulo(),
                 'pedido_proveedor' => $order->getPedidoProveedor(),
                 'agencia_enviada' => $order->getAgenciaEnviada(),
