@@ -26,7 +26,6 @@ exercise4:
     requirements:
                provider: '\d+'
 
-
 paginateex1:
    path: /order/dropshipping/paginateEx1/{page}
    controller: App\Controller\ExamController::paginateEx1

@@ -65,7 +65,6 @@ class OrderEntityRepository extends EntityRepository implements OrderEntityRepos
         return $qb->execute();
     }
 
-
     public function returnOrder(string $pedido): array
     {
         $qb = $this->createQueryBuilder('p')
@@ -76,9 +75,27 @@ class OrderEntityRepository extends EntityRepository implements OrderEntityRepos
         return $qb->execute();
     }
 
-    public function changeProvider(string $pedido, string $id_articulo, string $proveedor): void
+    public function reset(string $pedido, string $id_articulo)
     {
+        $orderEntity = $this->findByOrderAndIdArticle($pedido, $id_articulo);
+        $orderEntity->setEstado('Nuevo');
+        $orderEntity->setPedidoProveedor(0);
+        $orderEntity->setAlmacen(0);
+        $orderEntity->setIdProveedor(0);
+        $this->persist($orderEntity);
+    }
 
+    public function changeProvider(string $pedido, string $id_articulo, string $proveedor)
+    {
+        $this->persist($this->findByOrderAndIdArticle($pedido, $id_articulo)->setIdProveedor($proveedor));
+    }
+
+    private function findByOrderAndIdArticle($order, $article)
+    {
+        return $this->findOneBy([
+            'pedido' => $order,
+            'id_articulo' => $article
+        ]);
     }
 
 }

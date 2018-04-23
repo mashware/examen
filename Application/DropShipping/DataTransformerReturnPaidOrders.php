@@ -6,7 +6,7 @@
  * Time: 10:42
  */
 
-namespace App\Domain\Service;
+namespace Application\DropShipping;
 
 
 class DataTransformerReturnPaidOrders

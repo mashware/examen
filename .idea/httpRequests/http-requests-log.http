@@ -1,0 +1,128 @@
+POST http://localhost:8000/order/dropshipping/4/article/23?provider=5000
+Accept:*/*
+Cache-Control:no-cache
+
+<> 2018-04-23T011350.200.json
+
+###
+
+POST http://localhost:8000/order/dropshipping/42/article/48?provider=5000
+Accept:*/*
+Cache-Control:no-cache
+
+<> 2018-04-23T011321.200.json
+
+###
+
+POST http://localhost:8000/order/dropshipping/42/article/48?provider=5000
+Accept:*/*
+Cache-Control:no-cache
+
+<> 2018-04-23T121846.200.json
+
+###
+
+POST http://localhost:8000/order/dropshipping/42/article/48?provider=2000
+Accept:*/*
+Cache-Control:no-cache
+
+<> 2018-04-23T121837.200.json
+
+###
+
+POST http://localhost:8000/order/dropshipping/42/article/100?provider=2000
+Accept:*/*
+Cache-Control:no-cache
+
+<> 2018-04-23T121829.500.html
+
+###
+
+POST http://localhost:8000/order/dropshipping/42/article/100?provider=2000
+Accept:*/*
+Cache-Control:no-cache
+
+<> 2018-04-23T121435.500.html
+
+###
+
+POST http://localhost:8000/order/dropshipping/42/article/48?provider=2000
+Accept:*/*
+Cache-Control:no-cache
+
+<> 2018-04-23T121414.200.json
+
+###
+
+POST http://localhost:8000/order/dropshipping/42/article/48?provider=2000
+Accept:*/*
+Cache-Control:no-cache
+
+<> 2018-04-23T121352.500.html
+
+###
+
+POST http://localhost:8000/order/dropshipping/42/article/48?provider=2000
+Accept:*/*
+Cache-Control:no-cache
+
+<> 2018-04-23T120710.500.html
+
+###
+
+POST http://localhost:8000/order/dropshipping/42/article/48?provider=2000
+Accept:*/*
+Cache-Control:no-cache
+
+<> 2018-04-23T120624.500.html
+
+###
+
+POST http://localhost:8000/order/dropshipping/42/article/48?provider=2000
+Accept:*/*
+Cache-Control:no-cache
+
+<> 2018-04-23T120509.500.html
+
+###
+
+POST http://localhost:8000/order/dropshipping/42/article/48?provider=2000
+Accept:*/*
+Cache-Control:no-cache
+
+<> 2018-04-23T120428.500.html
+
+###
+
+POST http://localhost:8000/order/dropshipping/42/article/48?provider=2000
+Accept:*/*
+Cache-Control:no-cache
+
+<> 2018-04-23T115627.200.json
+
+###
+
+POST http://localhost:8000/order/dropshipping/42/article/48?provider=2000
+Accept:*/*
+Cache-Control:no-cache
+
+<> 2018-04-23T115540.200.json
+
+###
+
+POST http://localhost:8000/order/dropshipping/42/article/48?provider=2000
+Accept:*/*
+Cache-Control:no-cache
+
+<> 2018-04-23T115435.500.html
+
+###
+
+POST http://localhost:8000/order/dropshipping/42/article/48?provider=1000
+Accept:*/*
+Cache-Control:no-cache
+
+<> 2018-04-23T112919.200.json
+
+###
+

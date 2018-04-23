@@ -8,12 +8,6 @@
 
 namespace Application\DropShipping;
 
-use App\Domain\Entity\EmptyQueryOutputException;
-use App\Domain\Entity\OrderEntity;
-use App\Domain\Service\DataTransformerReturnPaidOrders;
-use App\Domain\Service\EmptyQueryOutputValidator;
-use App\Domain\Service\Interfaces\Validable;
-use App\Domain\Service\ResetService;
 use Infrastructure\Repository\OrderEntityRepository;
 
 class DropShippingReset
@@ -23,6 +17,7 @@ class DropShippingReset
 
     /**
      * DropShippingReset constructor.
+     *
      * @param OrderEntityRepository $orderEntityRepository
      */
     public function __construct(OrderEntityRepository $orderEntityRepository)
@@ -31,27 +26,13 @@ class DropShippingReset
     }
 
     /**
-     * @param Validable $validator
-     * @param ResetService $resetService
-     * @param string $order
-     * @param string $article
-     * @throws EmptyQueryOutputException
+     * @param DropShippingResetCommand $dropShippingResetCommand
      */
-    public function execute(Validable $validator, ResetService $resetService, string $order, string $article): void
+    public function execute(DropShippingResetCommand $dropShippingResetCommand): void
     {
-        $orderEntity = $this->orderEntityRepository->findOneBy(
-            [
-                'pedido' => $order,
-                'id_articulo' => $article
-            ]
+        $this->orderEntityRepository->reset(
+            $dropShippingResetCommand->getOrder(),
+            $dropShippingResetCommand->getArticle()
         );
-
-        if ($validator->validate($orderEntity)) {
-            throw new EmptyQueryOutputException();
-        }
-
-        $resetService->execute($orderEntity);
-
-        $this->orderEntityRepository->persist($orderEntity);
     }
 }

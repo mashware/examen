@@ -2,8 +2,7 @@
 
 namespace App\Tests;
 
-use App\Domain\prueba;
-use Infrastructure\Repository\OrderEntityRepository;
+use Application\prueba;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -20,7 +19,7 @@ class DropShippingTest extends TestCase
      */
     public function given_an_instance_when_is_created_then_success()
     {
-        $prueba = new prueba('Hola mundo');
-        $this->assertTrue($prueba->printCadena());
+
+        $this->assertTrue((new Prueba())->printCadena('Hola'));
     }
 }

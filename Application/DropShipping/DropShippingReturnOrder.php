@@ -8,8 +8,6 @@
 
 namespace Application\DropShipping;
 
-use App\Domain\Entity\EmptyQueryOutputException;
-use App\Domain\Service\Interfaces\Validable;
 use Infrastructure\Repository\OrderEntityRepository;
 
 class DropShippingReturnOrder
@@ -19,6 +17,7 @@ class DropShippingReturnOrder
 
     /**
      * DropShippingReturnOrder constructor.
+     *
      * @param OrderEntityRepository $orderEntityRepository
      */
     public function __construct(OrderEntityRepository $orderEntityRepository)
@@ -27,18 +26,13 @@ class DropShippingReturnOrder
     }
 
     /**
-     * @param Validable $validator
-     * @param string $order
+     * @param DropShippingReturnOrderCommand $dropShippingReturnOrderCommand
+     *
      * @return array
-     * @throws EmptyQueryOutputException
      */
-    public function execute(Validable $validator, string $order): array
+    public function execute(DropShippingReturnOrderCommand $dropShippingReturnOrderCommand): array
     {
-        $queryOutput = $this->orderEntityRepository->returnOrder($order);
-
-        if ($validator->validate($queryOutput)) {
-            throw new EmptyQueryOutputException();
-        }
+        $queryOutput = $this->orderEntityRepository->returnOrder($dropShippingReturnOrderCommand->getOrder());
 
         return $queryOutput;
     }

@@ -6,11 +6,9 @@
  * Time: 13:31
  */
 
-use App\Domain\Entity\OrderEntity;
-use App\Domain\Service\DataTransformerReturnPaidOrders;
-use App\Domain\Service\EmptyQueryOutputValidator;
-use Application\DropShipping\DropShipping;
+namespace Application;
 
-require __DIR__.'/../vendor/autoload.php';
+
+
 
 

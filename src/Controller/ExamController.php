@@ -4,30 +4,32 @@ namespace App\Controller;
 
 use App\Controller\Util\FillTableOrderEntity;
 use App\Domain\Entity\OrderEntity;
-use App\Domain\Service\DataTransformerReturnPaidOrders;
-use App\Domain\Service\EmptyEntityValidator;
-use App\Domain\Service\EmptyQueryOutputValidator;
-use App\Domain\Service\ResetService;
+use Application\DropShipping\DataTransformerPaginateEx1;
+use Application\DropShipping\DataTransformerReturnPaidOrders;
 use Application\DropShipping\DropShippingReset;
+use Application\DropShipping\DropShippingResetCommand;
 use Application\DropShipping\DropShippingReturnOrder;
+use Application\DropShipping\DropShippingReturnOrderCommand;
+use Application\DropShipping\DropShippingUpdateProvider;
+use Application\DropShipping\DropShippingUpdateProviderCommand;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Application\DropShipping\DropShipping;
 
 class ExamController extends Controller
 {
+    public const NUMORDERSPERPAGE = 5;
+
     public function returnPaidOrders(): Response
     {
         $dropShipping = new DropShipping(
-            $this->getDoctrine()
-                ->getRepository(
-                    OrderEntity::class
-                )
+            $this->getDoctrine()->getRepository(
+                OrderEntity::class
+            ),
+            new DataTransformerReturnPaidOrders()
         );
-
-        $paidOrders = $dropShipping->execute(new EmptyQueryOutputValidator(), new DataTransformerReturnPaidOrders());
-
-        return $this->json(($paidOrders));
+        return $this->json(($dropShipping->execute()));
     }
 
     public function reset($order, $article)
@@ -39,7 +41,7 @@ class ExamController extends Controller
                 )
         );
 
-        $dropShippingReset->execute(new EmptyEntityValidator(), new ResetService(), $order, $article);
+        $dropShippingReset->execute(new DropShippingResetCommand($order, $article));
 
         return $this->json(['200' => 'ok']);
     }
@@ -53,31 +55,35 @@ class ExamController extends Controller
                 )
         );
 
-        $queryOrder = $dropShippingReturnOrder->execute(new EmptyQueryOutputValidator(), $order);
+        $queryOrder = $dropShippingReturnOrder->execute(new DropShippingReturnOrderCommand($order));
 
         return $this->json($queryOrder);
     }
 
-    public function updateProvider($order, $article)
+    public function updateProvider($order, $article, Request $request)
     {
-        $repository =
+        $provider = $request->request->get('provider');
+
+        $dropShippingUpdateProvider = new DropShippingUpdateProvider(
             $this->getDoctrine()
                 ->getRepository(
                     OrderEntity::class
-                );
+                )
+        );
 
-        $product = $repository->findOneBy([
-            'pedido' => $order,
-            'id_articulo' => $article
-        ]);
+        $dropShippingUpdateProvider->execute(new DropShippingUpdateProviderCommand($order, $article, $provider));
 
-        return $this->json($product->getFechaEntregaPrevista());
+        return $this->json(
+            [
+                '200' => 'Ok'
+            ]
+        );
     }
 
     public function paginateEx1($page): Response
     {
         $result = json_decode($this->returnPaidOrders()->getContent());
-        $result = array_slice($result, 5*($page-1), 5);
+        $result = (new DataTransformerPaginateEx1())->execute($result, $page);
 
         return $this->render(
             'PaginateEx1/paginateEx1.html.twig',
@@ -87,7 +93,6 @@ class ExamController extends Controller
             ]
         );
     }
-
 
     public function rellena(): Response
     {

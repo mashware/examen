@@ -18,6 +18,7 @@ interface OrderEntityRepositoryInterface
 
     public function returnOrder(string $pedido): array;
 
-    public function changeProvider(string $pedido, string $id_articulo, string $proveedor): void;
+    public function changeProvider(string $pedido, string $id_articulo, string $proveedor);
 
+    public function reset(string $pedido, string $id_articulo);
 }
