@@ -1,0 +1,24 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+obtein_dropshipping_ordersAll:
+     path: /order/dropshippingAll
+     controller: App\Infraestructure\Controller\MainController::getDropshippingOrdersAll
+
+obtein_dropshipping_orders:
+      path: /order/dropshipping
+      controller: App\Infraestructure\Controller\MainController::getDropshippingOrders
+
+reset_order_by_pedido_and_articule:
+      path: /order/dropshipping/{idPedido}/article/{idAritculo}/reset
+      controller: App\Infraestructure\Controller\MainController::resetOrderByIdPedidoAndIdArticulo
+
+obtein_order_by_pedido:
+      path: /order/dropshipping/{idPedido}
+      controller: App\Infraestructure\Controller\MainController::getOrderByIdPedido
+
+generate_paid_test_data:
+      path: /test
+      controller: App\Infraestructure\Controller\MainController::insertTestData
+
