@@ -2,27 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a4ad36e-6e39-4a08-b511-d50c674eab91" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Application/ChangeProviderFromOrderWithArticle/ChangeProviderFromOrderWithArticle.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Application/ChangeProviderFromOrderWithArticle/ChangeProviderFromOrderWithArticleCommand.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Application/ChangeProviderFromOrderWithArticle/ChangeProviderFromOrderWithArticleDataTransform.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Application/ChangeProviderFromOrderWithArticle/ChangeProviderFromOrderWithArticleDataTransformEmpty.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Application/GetAnOrderWithOrderId/GetAnOrderWithOrderId.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Application/GetAnOrderWithOrderId/GetAnOrderWithOrderIdCommand.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Application/GetAnOrderWithOrderId/GetAnOrderWithOrderIdDataTransform.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Application/GetAnOrderWithOrderId/GetAnOrderWithOrderIdDataTransformJSON.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Application/OrdersPerPage/OrdersPerPage.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Application/OrdersPerPage/OrdersPerPageCommand.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Application/OrdersPerPage/OrdersPerPageDataTransFormJSON.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Application/OrdersPerPage/OrdersPerPageDataTransform.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Domain/Entity/DropShipping/OrderNotFoundException.php" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change beforePath="$PROJECT_DIR$/config/routes.yaml" afterPath="$PROJECT_DIR$/config/routes.yaml" />
-      <change beforePath="$PROJECT_DIR$/src/Application/ResetAnOrderWithArticle/ResetAnOrderWithArticle.php" afterPath="$PROJECT_DIR$/src/Application/ResetAnOrderWithArticle/ResetAnOrderWithArticle.php" />
+      <change beforePath="$PROJECT_DIR$/src/Application/GetAnOrderWithOrderId/GetAnOrderWithOrderIdCommand.php" afterPath="$PROJECT_DIR$/src/Application/GetAnOrderWithOrderId/GetAnOrderWithOrderIdCommand.php" />
       <change beforePath="$PROJECT_DIR$/src/Infrastructure/Controller/DropShippingController.php" afterPath="$PROJECT_DIR$/src/Infrastructure/Controller/DropShippingController.php" />
-      <change beforePath="$PROJECT_DIR$/src/Infrastructure/Entity/DropShipping/Repository/OrderDropShippingDoctrineRepository.php" afterPath="$PROJECT_DIR$/src/Infrastructure/Entity/DropShipping/Repository/OrderDropShippingDoctrineRepository.php" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" afterPath="$PROJECT_DIR$/symfony.lock" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -81,7 +62,7 @@
         <entry file="file://$PROJECT_DIR$/src/Application/OrdersPerPage/OrdersPerPageCommand.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
-              <caret line="26" column="34" lean-forward="true" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
+              <caret line="26" column="34" lean-forward="false" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -117,11 +98,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GetAnOrderWithOrderId.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GetAnOrderWithOrderId.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Application/GetAnOrderWithOrderId/GetAnOrderWithOrderId.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="31" column="123" lean-forward="false" selection-start-line="31" selection-start-column="84" selection-end-line="31" selection-end-column="123" />
+            <state relative-caret-position="432">
+              <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -147,14 +128,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DropShippingController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DropShippingController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Infrastructure/Controller/DropShippingController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="89" column="8" lean-forward="false" selection-start-line="89" selection-start-column="8" selection-end-line="89" selection-end-column="8" />
+            <state relative-caret-position="328">
+              <caret line="38" column="16" lean-forward="false" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
               <folding>
                 <element signature="e#49#139#0#PHP" expanded="true" />
-                <element signature="e#3643#3679#1#PHP" expanded="true" />
+                <element signature="e#3730#3766#1#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -163,8 +144,8 @@
       <file leaf-file-name="GetAnOrderWithOrderIdCommand.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Application/GetAnOrderWithOrderId/GetAnOrderWithOrderIdCommand.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+            <state relative-caret-position="-54">
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -209,7 +190,6 @@
         <option value="$PROJECT_DIR$/src/Domain/Entity/DropShipping/OrderNotFoundException.php" />
         <option value="$PROJECT_DIR$/src/Application/ResetAnOrderWithArticle/ResetAnOrderWithArticle.php" />
         <option value="$PROJECT_DIR$/src/Application/GetAnOrderWithOrderId/GetAnOrderWithOrderIdDataTransform.php" />
-        <option value="$PROJECT_DIR$/src/Application/GetAnOrderWithOrderId/GetAnOrderWithOrderIdCommand.php" />
         <option value="$PROJECT_DIR$/src/Application/GetAnOrderWithOrderId/GetAnOrderWithOrderId.php" />
         <option value="$PROJECT_DIR$/src/Application/GetAnOrderWithOrderId/GetAnOrderWithOrderIdDataTransformJSON.php" />
         <option value="$PROJECT_DIR$/src/Application/ChangeProviderFromOrderWithArticle/ChangeProviderFromOrderWithArticleDataTransform.php" />
@@ -222,6 +202,7 @@
         <option value="$PROJECT_DIR$/config/routes.yaml" />
         <option value="$PROJECT_DIR$/src/Application/OrdersPerPage/OrdersPerPageDataTransFormJSON.php" />
         <option value="$PROJECT_DIR$/src/Application/OrdersPerPage/OrdersPerPageCommand.php" />
+        <option value="$PROJECT_DIR$/src/Application/GetAnOrderWithOrderId/GetAnOrderWithOrderIdCommand.php" />
         <option value="$PROJECT_DIR$/src/Infrastructure/Controller/DropShippingController.php" />
       </list>
     </option>
@@ -265,11 +246,6 @@
             <path>
               <item name="Examen" type="b2602c69:ProjectViewProjectNode" />
               <item name="Examen" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Examen" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Examen" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -283,14 +259,7 @@
               <item name="Examen" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="ChangeProviderFromOrderWithArticle" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Examen" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Examen" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="OrdersPerPage" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="GetAnOrderWithOrderId" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Examen" type="b2602c69:ProjectViewProjectNode" />
@@ -304,14 +273,6 @@
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Domain" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Examen" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Examen" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Domain" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="DropShipping" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Examen" type="b2602c69:ProjectViewProjectNode" />
@@ -325,56 +286,6 @@
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Infrastructure" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Examen" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Examen" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Infrastructure" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Examen" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Examen" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Infrastructure" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="DropShipping" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Examen" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Examen" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Infrastructure" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="DropShipping" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Repository" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Examen" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Examen" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="tests" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Examen" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Examen" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="tests" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Domain" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Examen" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Examen" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="tests" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Domain" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Examen" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Examen" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="tests" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Domain" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="DropShipping" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -464,7 +375,7 @@
       <workItem from="1524122279500" duration="2777000" />
       <workItem from="1524125699777" duration="16273000" />
       <workItem from="1524204262167" duration="18517000" />
-      <workItem from="1524464654959" duration="14957000" />
+      <workItem from="1524464654959" duration="15592000" />
     </task>
     <servers />
   </component>
@@ -501,7 +412,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52524000" />
+    <option name="totallyTimeSpent" value="53159000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1050" extended-state="6" />
@@ -511,7 +422,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32977587" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -890,26 +801,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Application/GetAnOrderWithOrderId/GetAnOrderWithOrderId.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="31" column="123" lean-forward="false" selection-start-line="31" selection-start-column="84" selection-end-line="31" selection-end-column="123" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Application/OrdersPerPage/OrdersPerPageDataTransFormJSON.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="27" column="9" lean-forward="false" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Application/GetAnOrderWithOrderId/GetAnOrderWithOrderIdCommand.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -925,19 +820,35 @@
     <entry file="file://$PROJECT_DIR$/src/Application/OrdersPerPage/OrdersPerPageCommand.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
-          <caret line="26" column="34" lean-forward="true" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
+          <caret line="26" column="34" lean-forward="false" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Application/GetAnOrderWithOrderId/GetAnOrderWithOrderIdCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-54">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Infrastructure/Controller/DropShippingController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="89" column="8" lean-forward="false" selection-start-line="89" selection-start-column="8" selection-end-line="89" selection-end-column="8" />
+        <state relative-caret-position="328">
+          <caret line="38" column="16" lean-forward="false" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
           <folding>
             <element signature="e#49#139#0#PHP" expanded="true" />
-            <element signature="e#3643#3679#1#PHP" expanded="true" />
+            <element signature="e#3730#3766#1#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Application/GetAnOrderWithOrderId/GetAnOrderWithOrderId.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>

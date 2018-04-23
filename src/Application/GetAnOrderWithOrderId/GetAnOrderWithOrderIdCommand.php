@@ -8,14 +8,21 @@
 
 namespace App\Application\GetAnOrderWithOrderId;
 
+use Assert\Assertion;
 
 class GetAnOrderWithOrderIdCommand
 {
 
     private $orderId;
 
-    public function __construct(int $orderId)
+    /**
+     * GetAnOrderWithOrderIdCommand constructor.
+     * @param $orderId
+     * @throws \Assert\AssertionFailedException
+     */
+    public function __construct($orderId)
     {
+        Assertion::numeric($orderId);
         $this->orderId = $orderId;
     }
 

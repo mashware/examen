@@ -26,6 +26,8 @@ use Symfony\Component\HttpFoundation\Response;
 
 class DropShippingController extends Controller
 {
+    const INVALID_PARAMETER = 'Invalid Parameter';
+
     public function allOrdersPaid()
     {
         $order = new GetAllOrdersPaid($this->getDoctrine()->getRepository('App:DropShipping\OrderDropShipping'), new GetAllOrdersPaidDataTransformJSON());
@@ -34,7 +36,12 @@ class DropShippingController extends Controller
 
     public function getAnOrderWithOrderId($orderId)
     {
-        $command = new GetAnOrderWithOrderIdCommand($orderId);
+        try{
+            $command = new GetAnOrderWithOrderIdCommand($orderId);
+        }catch (InvalidArgumentException $e){
+        return $this->json(self::INVALID_PARAMETER, Response::HTTP_BAD_REQUEST);
+    }
+
         $order = new GetAnOrderWithOrderId($this->getDoctrine()->getRepository('App:DropShipping\OrderDropShipping'), new GetAnOrderWithOrderIdDataTransformJSON());
         $statusReturn = $order->handler($command);
         return $this->json($statusReturn['data'], $statusReturn['status']);
@@ -68,7 +75,7 @@ class DropShippingController extends Controller
             $newProvider = $request->request->get('id_proveedor');
             $command = new ChangeProviderFromOrderWithArticleCommand($orderId, $articleId, $newProvider);
         }catch (InvalidArgumentException $e){
-            return $this->json('Invalid Parameter', Response::HTTP_BAD_REQUEST);
+            return $this->json(self::INVALID_PARAMETER, Response::HTTP_BAD_REQUEST);
         }
         $executeOperation = new ChangeProviderFromOrderWithArticle($this->getDoctrine()->getRepository('App:DropShipping\OrderDropShipping'), new ChangeProviderFromOrderWithArticleDataTransformEmpty());
         $statusReturn = $executeOperation->handler($command);
@@ -80,7 +87,7 @@ class DropShippingController extends Controller
         try{
             $command = new OrdersPerPageCommand($page, $ordersPerPage);
         }catch (InvalidArgumentException $e){
-            return $this->json('Invalid Parameter', Response::HTTP_BAD_REQUEST);
+            return $this->json(self::INVALID_PARAMETER, Response::HTTP_BAD_REQUEST);
         }
 
         $executeOperation = new OrdersPerPage($this->getDoctrine()->getRepository('App:DropShipping\OrderDropShipping'), new OrdersPerPageDataTransFormJSON());
